@@ -1,24 +1,29 @@
-# README
+## アプリケーション名
+rawspot
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション概要
+住宅営業マンのための土地情報共有サービス
 
-Things you may want to cover:
+## URL
+https://rawspot.herokuapp.com/
 
-* Ruby version
+## テスト用アカウント
 
-* System dependencies
 
-* Configuration
+## 利用方法
+不動産業者から聞き出した物件を投稿できる。また他の者が投稿した物件を確認できる
 
-* Database creation
+## 目指した課題解決
+住宅営業マンのために、一般公開されていない不動産情報を社員同士で共有できる。最低限の情報を簡単に共有できる。
 
-* Database initialization
+## 洗い出した要件
+ユーザー登録、画像の投稿、pdfの投稿、地図の表示、コメント機能、検索機能、お気に入り登録
 
-* How to run the test suite
+## 実装した機能についての画像やGIFおよびその説明
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## データベース設計
+https://gyazo.com/02367d86a3d38d7e201e2896a6aaad75
 
-* ...
+## ローカルでの動作方法
+
