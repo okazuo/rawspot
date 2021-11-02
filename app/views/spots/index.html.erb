@@ -1,4 +1,8 @@
-<%= render 'shared/header' %>
-hellow world
-
-<%= render 'shared/footer' %>
+<div class='nav'>
+  <ul class='top-lists'>
+    <li><%= link_to '新規登録',new_user_registration_path, class: 'top-title' %></li>
+    <li><%= link_to 'ログイン','#', class: 'top-title' %></li>
+    <li><%= link_to "さんのマイページ" ,'#', class: 'top-title' %></li>
+    <li><%= link_to '売地を登録する','#', class: 'top-title' %></li>
+  </ul>
+</div>
