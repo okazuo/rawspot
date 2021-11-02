@@ -1,0 +1,29 @@
+.nav{
+  width: 100vw;
+  font-size: 25px;
+}
+.nosign-title{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.top-lists{
+  display: flex;
+  justify-content: center;
+}
+
+.top-title{
+  display: block;
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.nosign-top-title{
+  display: block;
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid;
+  margin: 20px 20px 100px 20px;
+}

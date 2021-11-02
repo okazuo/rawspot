@@ -1,0 +1,42 @@
+.form-wrap{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin: 50px 0;
+}
+
+.form-header-text{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.field{
+  margin: 20px 0;
+}
+
+.input-default{
+width: 270px;
+height: 23px;
+resize: none;
+padding: 13px 15px; 
+}
+
+.registrations-btn{
+  margin: 40px 0;
+}
+
+.sign-btn{
+  width: 300px;
+  height: 40px;
+}
+
+.indispensable{
+  background: rgb(255, 0, 0);
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 3px;
+  border-radius: 4px;
+}

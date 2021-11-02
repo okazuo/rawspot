@@ -1,1 +1,23 @@
-hellow world
+<div class='nav'>
+<% unless user_signed_in? %>
+  <h1 class='nosign-title'>ご利用にはユーザー登録が必要です</h1>
+<% end %>
+
+  <ul class='top-lists'>
+  <% if user_signed_in? %>
+    <li><%= link_to root_path, class: 'top-title' do %>
+      <%=current_user.name%>さん<br>マイページ
+    <% end %></li>
+    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'top-title' %></li>
+    <li><%= link_to '売地を登録する','#', class: 'top-title' %></li>
+  <% else %>
+    <li><%= link_to '新規登録',new_user_registration_path, class: 'nosign-top-title' %></li>
+    <li><%= link_to 'ログイン', new_user_session_path, class: 'nosign-top-title' %></li>
+  <% end %>
+  </ul>
+
+  <% if user_signed_in? %>
+
+    
+  <% end %>
+</div>
