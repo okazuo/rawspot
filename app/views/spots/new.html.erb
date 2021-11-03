@@ -11,12 +11,14 @@
       取り扱い業者
       <span class='indispensable'>必須</span>
       </div>
-      <%= f.text_area :estate_agent, class: 'item-text', placeholder: '不動産屋もしくは地主' ,maxlength: '40' %>
+      <%= f.text_area :estate_agent, class: '-text', placeholder: '不動産屋もしくは地主' ,maxlength: '40' %>
+
       <div class='weight-bold-text'>
       住所
       <span class='indispensable'>必須</span>
       </div>
       <%= f.text_area :address, class: 'item-text', placeholder: '都道府県から入力' ,maxlength: '40' %>
+      
       <div class='weight-bold-text'>
       面積
       </div>
@@ -29,28 +31,30 @@
       水道管設備
       <span class='indispensable'>必須</span>
       </div>
-      <%= f.text_area :warter_id, class: 'item-text' %>
+      <%= f.collection_select(:water_id, Water.all, :id, :name, {},class: 'select-box') %>
       <div class='weight-bold-text'>
       公図
       <span class='indispensable'>必須</span>
       </div>
-      <%= f.text_area :officialmap_id, class: 'item-text' %>
+      <%= f.collection_select(:officialmap_id, Officialmap.all, :id, :name, {},class: 'select-box') %>
       <div class='weight-bold-text'>
       謄本
       <span class='indispensable'>必須</span>
       </div>
-      <%= f.text_area :transcript_id, class: 'item-text'%>
+      <%= f.collection_select(:transcript_id,Transcript.all, :id, :name, {},class: 'select-box') %>
       <div class='weight-bold-text'>
-      物件に関する連絡先
+      物件に関する問い合わせ先
       <span class='indispensable'>必須</span>
       </div>
-      <%= f.text_area :explanation, class: 'item-text' %>
-      
+      <%= f.collection_select(:contact_id, Contact.all, :id, :name, {},class: 'select-box') %>
       <div class='weight-bold-text'>
       備考
-
       </div>
-      <%= f.text_area :contact_id, class: 'item-text', placeholder: '補足や注意点等(1000字以内)' ,maxlength: '1000' %>
+      <%= f.text_area :explanation, class: 'item-text', placeholder: '補足や注意点等(1000字以内)' ,maxlength: '1000' %>
+      <div class='post-btn-contents'>
+      <%= f.submit '物件を登録する', class:'post-btn' %>
+      <%= link_to 'もどる', root_path, class:'back-btn' %>
+      </div>
     </div>
 
 
