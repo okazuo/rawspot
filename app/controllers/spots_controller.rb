@@ -7,7 +7,12 @@ class SpotsController < ApplicationController
   end
   
   def create
-    @spot= Spot.create(spot_params)
+    @spot= Spot.new(spot_params)
+    if @spot.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
