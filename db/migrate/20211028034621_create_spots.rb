@@ -10,6 +10,7 @@ class CreateSpots < ActiveRecord::Migration[6.0]
       t.integer :transcript_id
       t.text :explanation
       t.string :pdf
+      t.integer :contact_id
       t.references :user, null: false, foregign_key: true
 
       t.timestamps

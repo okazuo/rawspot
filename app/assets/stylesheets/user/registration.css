@@ -20,6 +20,7 @@
 width: 270px;
 height: 23px;
 resize: none;
+overflow: hidden;
 padding: 13px 15px; 
 }
 
