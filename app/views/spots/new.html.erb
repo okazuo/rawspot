@@ -1,64 +1,87 @@
 <div class='spot-main'>
   <h1 class='new-spot-title'>
-  物件の情報入力
+    物件の情報を入力
   </h1>
   <%= form_with model: @spot, local: true do |f| %>
 
-    <%= render 'shared/error_messages', model: f.object %>
+  <%= render 'shared/error_messages', model: f.object %>
 
-    <div class='spot-explain'>
-      <div class='weight-bold-text'>
+  <div class='spot-explain'>
+    <div class='weight-bold-text'>
       取り扱い業者
       <span class='indispensable'>必須</span>
-      </div>
-      <%= f.text_area :estate_agent, class: '-text', placeholder: '不動産屋もしくは地主の名前' ,maxlength: '40' %>
+    </div>
+    <%= f.text_area :estate_agent, class: 'spot-text', placeholder: '不動産屋もしくは地主の名前' ,maxlength: '40' %>
 
-      <div class='weight-bold-text'>
+    <div class='weight-bold-text'>
       住所
       <span class='indispensable'>必須</span>
-      </div>
-      <%= f.text_area :address, class: 'item-text', placeholder: '都道府県から入力' ,maxlength: '40' %>
+    </div>
+    <%= f.text_area :address, class: 'spot-text', placeholder: '都道府県から入力' ,maxlength: '40' %>
 
-      <div class='weight-bold-text'>
+    <div class='weight-bold-text'>
       面積
-      </div>
-      <%= f.text_area :size, class: 'item-text', placeholder: '未確定の場合は詳細を備考欄へ記入' ,number: '4' %>
-      <div class='weight-bold-text'>
+    </div>
+    <div class='unic-wrap'>
+      <%= f.text_area :size, class: 'spot-text-unic', placeholder: '例）80' ,number: '4' %>
+      <p class='unic'>坪　</p>
+    </div>
+
+    <div class='weight-bold-text'>
       価格
-      </div>
-      <%= f.text_area :price, class: 'item-text', placeholder: '未確定の場合は詳細を備考欄へ記入' ,number: '10' %>
-      <div class='weight-bold-text'>
+    </div>
+    <div class='unic-wrap'>
+      <%= f.text_area :price, class: 'spot-text-unic', placeholder: '例）1000' ,number: '10' %>
+      <p class='unic'>
+        万円</p>
+    </div>
+
+    <div class='weight-bold-text'>
       水道管設備
       <span class='indispensable'>必須</span>
-      </div>
-      <%= f.collection_select(:water_id, Water.all, :id, :name, {},class: 'select-box') %>
-      <div class='weight-bold-text'>
+    </div>
+    <%= f.collection_select(:water_id, Water.all, :id, :name, {},class: 'select-box') %>
+
+    <div class='weight-bold-text'>
       公図
       <span class='indispensable'>必須</span>
-      </div>
-      <%= f.collection_select(:officialmap_id, Officialmap.all, :id, :name, {},class: 'select-box') %>
-      <div class='weight-bold-text'>
+    </div>
+    <%= f.collection_select(:officialmap_id, Officialmap.all, :id, :name, {},class: 'select-box') %>
+
+    <div class='weight-bold-text'>
       謄本
       <span class='indispensable'>必須</span>
-      </div>
-      <%= f.collection_select(:transcript_id,Transcript.all, :id, :name, {},class: 'select-box') %>
-      <div class='weight-bold-text'>
+    </div>
+    <%= f.collection_select(:transcript_id,Transcript.all, :id, :name, {},class: 'select-box') %>
+
+    <div class='weight-bold-text'>
       物件に関する問い合わせ先
       <span class='indispensable'>必須</span>
-      </div>
-      <%= f.collection_select(:contact_id, Contact.all, :id, :name, {},class: 'select-box') %>
-      <div class='weight-bold-text'>
-      備考欄
-      </div>
-      <%= f.text_area :explanation, class: 'item-text', placeholder: '補足や注意点等(1000字以内)' ,maxlength: '1000' %>
-      <div class='post-btn-contents'>
-      <%= f.submit '物件を登録する', class:'post-btn' %>
-      <%= link_to 'もどる', root_path, class:'back-btn' %>
+    </div>
+    <%= f.collection_select(:contact_id, Contact.all, :id, :name, {},class: 'select-box') %>
+
+    <div class='weight-bold-text'>
+    現地写真
+    </div>
+    <div class='image-upload'>
+      <div class='click-upload'>
+      <p>
+      クリックしてファイルをアップロード
+      </p>
+      <%= f.file_field :image,class: 'spot-image' %>
       </div>
     </div>
 
+    <div class='weight-bold-text'>
+      備考欄
+    </div>
+    <%= f.text_area :explanation, class: 'spot-text-sentence', placeholder: '補足や注意点等(1000字以内)' ,maxlength: '1000' %>
 
-
+    <div class='post-btn-contents'>
+      <%= f.submit '物件を登録する', class:'spot-btn' %>
+      <%= link_to 'もどる', root_path, class:'back-btn' %>
+    </div>
+  </div>
 
   <% end %>
 </div>
