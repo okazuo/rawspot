@@ -63,6 +63,11 @@ margin-top: -5px;
   margin-bottom: 10px;
 }
 
+.preview-size{
+  margin-top: 10px;
+  width:100%;
+}
+
 .weight-bold-text>span{
   font-weight: normal;
   margin-left: 5px;
