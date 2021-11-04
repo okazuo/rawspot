@@ -73,6 +73,18 @@
     </div>
 
     <div class='weight-bold-text'>
+    Fax情報<span>(pdf形式)</span>
+    </div>
+    <div class='image-upload'>
+      <div class='click-upload'>
+      <p>
+      クリックしてファイルをアップロード
+      </p>
+      <%= f.file_field :pdf,class: 'spot-image' %>
+      </div>
+    </div>
+
+    <div class='weight-bold-text'>
       備考欄
     </div>
     <%= f.text_area :explanation, class: 'spot-text-sentence', placeholder: '補足や注意点等(1000字以内)' ,maxlength: '1000' %>
