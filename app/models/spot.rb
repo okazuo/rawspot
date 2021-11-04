@@ -1,12 +1,12 @@
 class Spot < ApplicationRecord
 
   with_options presence: true do
-    validates :estate_agent
-    validates :address
+    validates :estate_agent,length: {maximum:50}
+    validates :address, length: {maximum:50}
   end
 
-  validates :size, numericality: true, allow_blank: true
-  validates :price, numericality: true, allow_blank: true
+  validates :size, numericality: true, allow_blank: true, length: {maximum: 4}
+  validates :price, numericality: true, allow_blank: true, length: {maximum: 5}
 
   with_options numericality:{other_than: 1, message:"can't be blank"} do
     validates :water_id
@@ -15,6 +15,8 @@ class Spot < ApplicationRecord
     validates :contact_id
   end
  
+  validates :explanation, length: {maximum: 1000}
+
   belongs_to :user
   has_one_attached :image
 

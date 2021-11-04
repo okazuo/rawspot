@@ -11,19 +11,19 @@
       取り扱い業者
       <span class='indispensable'>必須</span>
     </div>
-    <%= f.text_area :estate_agent, class: 'spot-text', placeholder: '不動産屋もしくは地主の名前' ,maxlength: '40' %>
+    <%= f.text_area :estate_agent, class: 'spot-text', placeholder: '不動産屋もしくは地主の名前' ,maxlength: '50' %>
 
     <div class='weight-bold-text'>
       住所
       <span class='indispensable'>必須</span>
     </div>
-    <%= f.text_area :address, class: 'spot-text', placeholder: '都道府県から入力' ,maxlength: '40' %>
+    <%= f.text_area :address, class: 'spot-text', placeholder: '都道府県から入力' ,maxlength: '50' %>
 
     <div class='weight-bold-text'>
       面積
     </div>
     <div class='unic-wrap'>
-      <%= f.text_area :size, class: 'spot-text-unic', placeholder: '例）80' ,number: '4' %>
+      <%= f.text_area :size, class: 'spot-text-unic', placeholder: '例）80' ,maxlength: '7' %>
       <p class='unic'>坪　</p>
     </div>
 
@@ -31,7 +31,7 @@
       価格
     </div>
     <div class='unic-wrap'>
-      <%= f.text_area :price, class: 'spot-text-unic', placeholder: '例）1000' ,number: '10' %>
+      <%= f.text_area :price, class: 'spot-text-unic', placeholder: '例）1000' ,maxlength: '8' %>
       <p class='unic'>
         万円</p>
     </div>
