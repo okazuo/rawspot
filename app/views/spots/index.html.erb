@@ -26,22 +26,9 @@
       <li style='width:25%'>価格/取り扱い業者</li>
     </ul>
 
-    <table>
-      <% @spots.each do |spot| %>
-      <td style='width:25%'><%= image_tag spot.image, width:'100%' %></td>
-      <td style='width:50%'>
-        <span>[所在]</span><%= spot.address %><br>
-        <span>[面積]</span><%= spot.size %>坪<br>
-        <span>[備考]</span><%= spot.explanation %>
-      </td>
-      <td style='width:25%'>
-        <p><%= spot.price %><span>万円</span></p>
-        <%= spot.estate_agent %><br>
-        <%= spot.created_at %><br>
-        <%= spot.user.name %><br>
-      </td>
-    </table>
-    <% end %>
+    <%= render partial:'spot', collection: @spots %>
+
+   
     <% end %>
   </div>
 </div>

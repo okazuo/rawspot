@@ -1,0 +1,27 @@
+    <table>
+      <% if spot.image.blank? %>
+      <td style='width:25%'><%= image_tag 'noimage.png', width:'100%' %></td>
+      <% else %>
+      <td style='width:25%'><%= image_tag spot.image, width:'100%' %></td>
+      <% end %>
+      <td style='width:50%'>
+        <span>[所在]</span><%= spot.address %><br>
+        <span>[面積]</span>
+        <% if spot.size.blank? %>
+        未定
+        <% else %>
+        <%= spot.size %>坪
+        <% end %><br>
+        <span>[備考]</span><%= spot.explanation %>
+      </td>
+      <td style='width:25%'>
+        <% if spot.price.blank? %>
+        価格：未定<br>
+        <% else %>
+        <p><%= spot.price %><span>万円</span></p>
+        <% end %>
+        <%= spot.estate_agent %><br>
+        [登録日時]<%= l spot.created_at %><br>
+        [登録者]<%= spot.user.name %><br>
+      </td>
+    </table>
