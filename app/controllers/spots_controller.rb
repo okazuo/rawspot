@@ -1,6 +1,7 @@
 class SpotsController < ApplicationController
   before_action :authenticate_user!, except: :index
   def index
+    @spots = Spot.order('created_at DESC')
   end
 
   def new

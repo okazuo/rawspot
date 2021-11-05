@@ -1,6 +1,10 @@
 .nav{
   width: 100vw;
   font-size: 25px;
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .nosign-title{
   text-align: center;
@@ -26,4 +30,46 @@
   text-align: center;
   border: 2px solid;
   margin: 20px 20px 100px 20px;
+}
+
+/* 物件一覧 */
+
+.spot-list{
+  width: 70vw;
+  background-color: white;
+  font-size: 20px;
+  
+}
+
+.number-of-properties{
+  text-align: center;
+}
+
+table{
+  table-layout: fixed;
+  width: 100%;
+  border-collapse:collapse;
+}
+
+.table-title{
+  display: flex;
+  width: 100%;
+}
+
+.table-title > li{
+  border: 1px solid;
+  text-align: center;
+}
+
+.none-border{
+ margin: 0 -1px;
+}
+
+tbody{
+  display: block;
+  margin-top: 10px;
+}
+
+td,th{
+  border:1px solid #000;
 }
