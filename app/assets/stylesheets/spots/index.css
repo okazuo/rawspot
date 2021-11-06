@@ -1,6 +1,10 @@
 .nav{
   width: 100vw;
   font-size: 25px;
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .nosign-title{
   text-align: center;
@@ -26,4 +30,107 @@
   text-align: center;
   border: 2px solid;
   margin: 20px 20px 100px 20px;
+}
+
+/* 物件一覧 */
+
+.spot-list{
+  width: 70vw;
+  background-color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.number-of-properties{
+  text-align: center;
+  font-size: 25px;
+}
+
+/* 一覧タイトル */
+.table-title{
+  display: flex;
+  width: 100%;
+}
+
+.table-title > li{
+  border: 1px solid;
+  text-align: center;
+}
+
+.none-border{
+  margin: 0 -1px;
+  text-align: center;
+}
+
+/* 一覧表示 */
+.spot-date{
+  display: flex;
+  width: 100%;
+  height: 150px;
+
+}
+
+.spot-date span{
+color:gray;
+}
+
+.spot-date > li{
+  border: 1px solid;
+  margin-top: 20px;
+}
+
+.left-date{
+  width: 25%;
+  position: relative;
+}
+
+.photo{
+  width: auto;
+  height: auto;
+  max-width:100%;
+  max-height:100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+.center-date{
+  width: 50%;
+  margin: 0 -1px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+.explanation-date{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.right-date{
+  width: 25%;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.company-date{
+  color: darkgreen;
+}
+
+.price{
+  color: red;
+}
+
+.price b{
+  font-size: 20px;
+}
+
+.unit-of-money{
+  color: red;
 }

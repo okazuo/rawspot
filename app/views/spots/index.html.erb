@@ -1,23 +1,34 @@
 <div class='nav'>
-<% unless user_signed_in? %>
+  <% unless user_signed_in? %>
   <h1 class='nosign-title'>ご利用にはユーザー登録が必要です</h1>
-<% end %>
+  <% end %>
 
   <ul class='top-lists'>
-  <% if user_signed_in? %>
+    <% if user_signed_in? %>
     <li><%= link_to root_path, class: 'top-title' do %>
       <%=current_user.name%>さん<br>マイページ
-    <% end %></li>
+      <% end %></li>
     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'top-title' %></li>
     <li><%= link_to '売地を登録する', new_spot_path, class: 'top-title' %></li>
-  <% else %>
+    <% else %>
     <li><%= link_to '新規登録',new_user_registration_path, class: 'nosign-top-title' %></li>
     <li><%= link_to 'ログイン', new_user_session_path, class: 'nosign-top-title' %></li>
-  <% end %>
+    <% end %>
   </ul>
 
   <% if user_signed_in? %>
+  <div class='spot-list'>
+    <p class='number-of-properties'><%= "物件の登録数は#{Spot.count}件です" %></p>
 
-    
-  <% end %>
+    <ul class='table-title'>
+      <li style='width:25%'>画像</li>
+      <li style='width:50%' , class='none-border'>所在地/面積</li>
+      <li style='width:25%'>価格/取り扱い業者</li>
+    </ul>
+
+    <%= render partial:'spot', collection: @spots %>
+
+   
+    <% end %>
+  </div>
 </div>

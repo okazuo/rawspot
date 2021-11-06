@@ -1,0 +1,38 @@
+    <ul class='spot-date'>
+      <%# 画像 %>
+      <li class='left-date'>
+        <% if spot.image.blank? %>
+        <%= image_tag 'noimage.png', class:'photo'%>
+        <% else %>
+        <%= image_tag spot.image, class:'photo'%>
+        <% end %>
+      </li>
+      <%# 所在地/面積 %>
+      <li class='center-date'>
+      <div>
+        <p><span>[所在]</span><%= spot.address %></p>
+        <p><span>[面積]</span>
+        <% if spot.size.blank? %>
+        未定
+        <% else %>
+        <%= spot.size %>坪
+        <% end %></p>
+        <p class = 'explanation-date'><span>[備考]</span><%= spot.explanation %></p>
+        </div>
+      </li>
+      <%# 価格/取り扱い業者 %>
+      <li class='right-date'>
+      <div>
+          <p class='price'>
+            <% if spot.price.blank? %>
+            価格：未定<br>
+            <% else %>
+            <b><%= spot.price %></b>万円
+            <% end %>
+          </p>
+          <p class='company-date'><%= spot.estate_agent %></p>
+          <p><span>[登録日時]</span><%= l spot.created_at %></p>
+          <p><span>[登録者]</span><%= spot.user.name %></p>
+          </div>
+      </li>
+    </ul>
