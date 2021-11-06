@@ -1,27 +1,38 @@
-    <table>
-      <% if spot.image.blank? %>
-      <td style='width:25%'><%= image_tag 'noimage.png', width:'100%' %></td>
-      <% else %>
-      <td style='width:25%'><%= image_tag spot.image, width:'100%' %></td>
-      <% end %>
-      <td style='width:50%'>
-        <span>[所在]</span><%= spot.address %><br>
-        <span>[面積]</span>
+    <ul class='spot-date'>
+      <%# 画像 %>
+      <li class='left-date'>
+        <% if spot.image.blank? %>
+        <%= image_tag 'noimage.png', class:'photo'%>
+        <% else %>
+        <%= image_tag spot.image, class:'photo'%>
+        <% end %>
+      </li>
+      <%# 所在地/面積 %>
+      <li class='center-date'>
+      <div>
+        <p><span>[所在]</span><%= spot.address %></p>
+        <p><span>[面積]</span>
         <% if spot.size.blank? %>
         未定
         <% else %>
         <%= spot.size %>坪
-        <% end %><br>
-        <span>[備考]</span><%= spot.explanation %>
-      </td>
-      <td style='width:25%'>
-        <% if spot.price.blank? %>
-        価格：未定<br>
-        <% else %>
-        <p><%= spot.price %><span>万円</span></p>
-        <% end %>
-        <%= spot.estate_agent %><br>
-        [登録日時]<%= l spot.created_at %><br>
-        [登録者]<%= spot.user.name %><br>
-      </td>
-    </table>
+        <% end %></p>
+        <p class = 'explanation-date'><span>[備考]</span><%= spot.explanation %></p>
+        </div>
+      </li>
+      <%# 価格/取り扱い業者 %>
+      <li class='right-date'>
+      <div>
+          <p class='price'>
+            <% if spot.price.blank? %>
+            価格：未定<br>
+            <% else %>
+            <b><%= spot.price %></b>万円
+            <% end %>
+          </p>
+          <p class='company-date'><%= spot.estate_agent %></p>
+          <p><span>[登録日時]</span><%= l spot.created_at %></p>
+          <p><span>[登録者]</span><%= spot.user.name %></p>
+          </div>
+      </li>
+    </ul>

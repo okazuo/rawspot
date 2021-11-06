@@ -18,7 +18,7 @@
 
   <% if user_signed_in? %>
   <div class='spot-list'>
-    <p class='number-of-properties'>物件数は〇〇件です</p>
+    <p class='number-of-properties'><%= "物件の登録数は#{Spot.count}件です" %></p>
 
     <ul class='table-title'>
       <li style='width:25%'>画像</li>
