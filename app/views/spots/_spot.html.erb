@@ -1,4 +1,6 @@
+    <%= link_to  spot_path(spot.id) ,class:'spot-link' do%>
     <ul class='spot-date'>
+
       <%# 画像 %>
       <li class='left-date'>
         <% if spot.image.blank? %>
@@ -35,4 +37,6 @@
           <p><span>[登録者]</span><%= spot.user.name %></p>
           </div>
       </li>
+
     </ul>
+    <% end %>
