@@ -1,0 +1,92 @@
+.show-spot{
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.show-photo{
+  width: 100%;
+}
+
+table{
+  table-layout: fixed;
+  width: 100%;
+}
+
+th,td{
+  border-collapse: collapse;
+  border:1px solid black;
+  padding: 8px;
+}
+
+th{
+  background-color: rgb(255, 255, 187);
+  width: 100px;
+}
+
+td{
+  width: calc(100% - 200px);
+}
+
+.margin-table{
+  margin: -1px auto;
+}
+
+.photo-table{
+  margin: 30px 0;
+}
+
+.small-photo{
+  padding: 0;
+  height: 20vh;
+  width: 20%;
+  text-align: center;
+}
+
+.small-image{
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 20vh;
+  vertical-align: bottom;
+}
+
+.show-favorite{
+  text-decoration: none;
+  color: yellow;
+  background-color: black;
+  border-radius: 5px;
+  padding: 2px;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+/* 編集、契約、取り扱い不可ボタン */
+
+.show-btn{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.gray-btn, .red-btn, .blue-btn{
+  color: white;
+  padding: 1vh 8vw;
+  margin:20px;
+  text-decoration: none;
+  display:inline-block;
+  font-size: 25px;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+.gray-btn{
+  background-color: gray;
+}
+
+.red-btn{
+  background-color: red;
+}
+
+.blue-btn{
+  background-color:skyblue;
+}

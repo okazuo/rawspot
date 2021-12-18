@@ -1,5 +1,7 @@
 class SpotsController < ApplicationController
   before_action :authenticate_user!, except: :index
+
+  
   def index
     @spots = Spot.order('created_at DESC')
   end
@@ -15,6 +17,10 @@ class SpotsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @spot = Spot.find(params[:id])
   end
 
   private
