@@ -16,6 +16,7 @@
     <% end %>
   </ul>
 
+
     <%= form_with(url: search_spots_path, method: :get, local: true, class: 'search-form') do |f|  %>
     <%= f.text_field :keyword, placeholder: '住所を入力', class: 'seatch-input' %>
     <%= f.submit '検索', class: 'search-btn' %>

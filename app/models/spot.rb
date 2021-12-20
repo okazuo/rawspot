@@ -25,11 +25,4 @@ class Spot < ApplicationRecord
   belongs_to :transcript
   belongs_to :water
 
-  def self.search(search)
-    if search != ""
-      Spot.where("address LIKE(?)", "%#{search}%").order("created_at DESC")
-    else
-      Spot.order("created_at DESC")
-    end
-  end
 end

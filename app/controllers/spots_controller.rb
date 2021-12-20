@@ -24,7 +24,8 @@ class SpotsController < ApplicationController
   end
 
   def search
-    @spots =Spot.search(params[:keyword])
+    @q = Spot.ransack(params[:q])
+    @items = @q.result
   end
 
   private
