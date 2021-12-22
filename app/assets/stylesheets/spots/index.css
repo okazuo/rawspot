@@ -1,42 +1,52 @@
 .nav{
   width: 100vw;
   font-size: 25px;
-  background-color: rgb(236, 236, 236);
+  background-color: ghostwhite;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.nosign-title{
+
+/* 検索欄 */
+.search-wrap{
   text-align: center;
-  margin-top: 50px;
+  width: 40%;
+  margin: 20px auto 0;
+  background-color: rgb(154, 255, 145);
+  padding: 1px 25px 25px 25px;
+  font-size: 20px;
+  border: double 5px green;
 }
 
-.top-lists{
-  display: flex;
-  justify-content: center;
+.search-field{
+  margin: 20px 0;
 }
 
-.top-title{
-  display: block;
-  width: 200px;
-  text-decoration: none;
-  text-align: center;
+.search-address-field{
+  width: calc(100% - 50px);
+  
+}
+.search-price{
+  width: calc((100% - 175px)/2);
 }
 
-.nosign-top-title{
-  display: block;
-  width: 200px;
-  text-decoration: none;
-  text-align: center;
-  border: 2px solid;
-  margin: 20px 20px 100px 20px;
+
+.search-btn{
+  width: 50%;
+}
+
+/* スピンボタン非表示 */
+.search-price::-webkit-inner-spin-button,
+.search-price::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance:textfield;
 }
 
 /* 物件一覧 */
 
 .spot-list{
   width: 70vw;
-  background-color: white;
   font-size: 20px;
   margin-bottom: 20px;
 }
@@ -48,6 +58,7 @@
 
 /* 一覧タイトル */
 .table-title{
+  background-color: white;
   display: flex;
   width: 100%;
 }
@@ -60,84 +71,4 @@
 .none-border{
   margin: 0 -1px;
   text-align: center;
-}
-
-/* 一覧表示 */
-
-
-.spot-date{
-  display: flex;
-  width: 100%;
-  height: 150px;
-  margin-top: 20px;
-  text-decoration: none;
-}
-
-.spot-link{
-  text-decoration: none;
-  color: black;
-}
-
-.spot-date span{
-color:gray;
-}
-
-.spot-date > li{
-  border: 1px solid;
-}
-
-.left-date{
-  width: 25%;
-  position: relative;
-}
-
-.photo{
-  width: auto;
-  height: auto;
-  max-width:100%;
-  max-height:100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-
-.center-date{
-  width: 50%;
-  margin: 0 -1px;
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-}
-.explanation-date{
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-}
-
-.right-date{
-  width: 25%;
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-}
-
-.company-date{
-  color: darkgreen;
-}
-
-.price{
-  color: red;
-}
-
-.price b{
-  font-size: 20px;
-}
-
-.unit-of-money{
-  color: red;
 }

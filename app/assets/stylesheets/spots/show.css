@@ -1,10 +1,28 @@
 .show-spot{
   width: 70vw;
   margin: 0 auto;
+  font-size: 15px;
+}
+
+.photo-size{
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  margin-top: 25px;
 }
 
 .show-photo{
-  width: 100%;
+  width: auto;
+  height: auto;
+  max-width:100%;
+  max-height:100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0px;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0 0 6px 1px black;
 }
 
 table{
@@ -13,6 +31,7 @@ table{
 }
 
 th,td{
+  background-color: white;
   border-collapse: collapse;
   border:1px solid black;
   padding: 8px;
@@ -32,6 +51,7 @@ td{
 }
 
 .photo-table{
+
   margin: 30px 0;
 }
 

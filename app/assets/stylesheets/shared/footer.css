@@ -9,6 +9,7 @@ footer{
   justify-content: center;
   text-align: center;
   font-size: 25px;
+  text-shadow: 3px 3px 3px green;
 }
 
 .footer-link{
@@ -23,4 +24,8 @@ footer{
   margin-top: 15px;
   display: flex;
   justify-content: center;
+}
+
+.rawspot-icon-white{
+  filter: drop-shadow(5px 5px 3px green);
 }
