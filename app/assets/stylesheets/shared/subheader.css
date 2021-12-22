@@ -1,0 +1,34 @@
+.sub-title{
+  background-color: orange;
+  width: 100%;
+  text-shadow: 2px 2px 3px black;
+}
+
+.nosign-title{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.top-lists{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-title{
+  display: block;
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+  color:white;
+  font-weight: bold;
+}
+
+.nosign-top-title{
+  display: block;
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid;
+  margin: 20px 20px 100px 20px;
+}

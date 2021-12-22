@@ -3,28 +3,24 @@
   <h1 class='nosign-title'>ご利用にはユーザー登録が必要です</h1>
   <% end %>
 
-  <ul class='top-lists'>
-    <% if user_signed_in? %>
-    <li><%= link_to root_path, class: 'top-title' do %>
-      <%=current_user.name%>さん<br>マイページ
-      <% end %></li>
-    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'top-title' %></li>
-    <li><%= link_to '売地を登録する', new_spot_path, class: 'top-title' %></li>
-    <% else %>
-    <li><%= link_to '新規登録',new_user_registration_path, class: 'nosign-top-title' %></li>
-    <li><%= link_to 'ログイン', new_user_session_path, class: 'nosign-top-title' %></li>
-    <% end %>
-  </ul>
+  <%= render 'shared/subheader' %>
 
-
-    <%= form_with(url: search_spots_path, method: :get, local: true, class: 'search-form') do |f|  %>
-    <%= f.text_field :keyword, placeholder: '住所を入力', class: 'seatch-input' %>
+  <% if user_signed_in? %>
+  <div class='search-wrap'>
+    <%= search_form_for Spot.ransack(params[:q]), url: search_spots_path do |f| %>
+    <div class='search-field'>
+      住所<%= f.text_field :address, placeholder: '住所', class: 'search-address-field',value: params[:q]&.dig(:address) %>
+    </div>
+    <div class="search-field">
+      価格<%= f.number_field :price_gteq ,placeholder: '上限価格', class: 'search-price'%> 万円〜
+      <%= f.number_field :price_lteq ,placeholder: '下限価格', class: 'search-price'%> 万円
+    </div>
     <%= f.submit '検索', class: 'search-btn' %>
     <% end %>
-  <% if user_signed_in? %>
+  </div>
   <div class='spot-list'>
-    <p class='number-of-properties'><%= "物件の登録数は#{Spot.count}件です" %></p>
 
+    <p class='number-of-properties'><%= "検索結果は#{@spots.count}件です" %></p>
     <ul class='table-title'>
       <li style='width:25%'>画像</li>
       <li style='width:50%' , class='none-border'>所在地/面積</li>

@@ -24,8 +24,12 @@ class SpotsController < ApplicationController
   end
 
   def search
+    if params[:q]&.dig(:address)
+      squished_keywords = params[:q][:address].squish
+      params[:q][:address_cont_any] = squished_keywords.split(' ')
+    end
     @q = Spot.ransack(params[:q])
-    @items = @q.result
+    @spots = @q.result.order("created_at DESC")
   end
 
   private
