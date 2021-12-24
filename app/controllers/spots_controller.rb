@@ -23,6 +23,10 @@ class SpotsController < ApplicationController
     @spot = Spot.find(params[:id])
   end
 
+  def edit
+    @spot= Spot.find(params[:id])
+  end
+
   def search
     if params[:q]&.dig(:address)
       squished_keywords = params[:q][:address].squish
