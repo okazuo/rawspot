@@ -1,18 +1,14 @@
 .sub-title{
   background-color: orange;
-  width: 100%;
-  text-shadow: 2px 2px 3px black;
+  width: 100vw;
 }
 
-.nosign-title{
-  text-align: center;
-  margin-top: 50px;
-}
 
 .top-lists{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-shadow: 2px 2px 3px black;
 }
 
 .top-title{
@@ -24,11 +20,20 @@
   font-weight: bold;
 }
 
-.nosign-top-title{
+.nosign-title{
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.top-title-nosign{
   display: block;
   width: 200px;
   text-decoration: none;
   text-align: center;
-  border: 2px solid;
+  color:white;
+  font-weight: bold;
+  border: 2px solid white;
+  box-shadow: 2px 2px 3px black;
   margin: 20px 20px 100px 20px;
 }
