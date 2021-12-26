@@ -1,11 +1,19 @@
 <div class='nav'>
   <div class='show-spot'>
     <div class='photo-size'>
+      <% if @spot.image.blank? %>
+      <%= image_tag 'noimage.png', class:'show-photo'%>
+      <% else %>
       <%= image_tag @spot.image ,class:'show-photo' %>
+      <% end %>
     </div>
     <table class='photo-table'>
       <tr>
+        <% if @spot.image.blank? %>
+        <td class='small-photo'><%= image_tag 'noimage.png' ,class:'small-image' %></td>
+        <% else %>
         <td class='small-photo'><%= image_tag @spot.image ,class:'small-image' %></td>
+        <% end %>
         <td class='small-photo'></td>
         <td class='small-photo'></td>
         <td class='small-photo'></td>
@@ -59,14 +67,12 @@
     <%= link_to '★お気に入り登録★', root_path, class: 'show-favorite' %>
     <div class='show-btn'>
       <% if @spot.user.id == current_user.id %>
-      <%= link_to '編集する',root_path ,class: 'gray-btn' %>
+      <%= link_to '編集 or 削除', edit_spot_path(@spot.id) ,class: 'gray-btn' %>
       <% end %>
       <div class='side-wrap'>
         <%= link_to '契約する' ,root_path ,class: 'red-btn' %>
         <%= link_to '取扱不可',root_path ,class: 'blue-btn'  %>
       </div>
     </div>
-
-
   </div>
 </div>
