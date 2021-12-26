@@ -81,28 +81,27 @@ margin-top: -5px;
   margin-bottom: 30px;
 }
 
-.post-btn-contents{
-
-}
 
 .spot-btn{
-  box-sizing: border-box;
   display: block;
+  box-sizing: border-box;
   width: 80%;
   height: 50px;
   background-color: rgb(0, 158, 0);
   color: white;
   margin: 0 auto;
+  font-size: 25px;
+  border-radius: 5px;
+
 }  
 
 .back-btn{
   display: block;
   text-decoration: none;
   width: 70%;
-  height: 40px;
+  height: 35px;
   text-align: center;
-  border: 2px solid;
-  border-radius: 2px;
+  border-radius: 5px;
   background-color: rgb(165, 165, 165);
   color: white;
   padding-top: 7px;

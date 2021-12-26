@@ -1,1 +1,100 @@
-hellow wordld
+<div class='spot-main'>
+  <h1 class='new-spot-title'>
+    物件の情報を入力
+  </h1>
+  <%= form_with model: @spot, local: true do |f| %>
+
+  <%= render 'shared/error_messages', model: f.object %>
+
+  <div class='spot-explain'>
+    <div class='weight-bold-text'>
+      取り扱い業者
+      <span class='indispensable'>必須</span>
+    </div>
+    <%= f.text_area :estate_agent, class: 'spot-text', placeholder: '不動産屋もしくは地主の名前' ,maxlength: '50' %>
+
+    <div class='weight-bold-text'>
+      物件の所在地
+      <span class='indispensable'>必須</span>
+    </div>
+    <%= f.text_area :address, class: 'spot-text', placeholder: '都道府県から入力' ,maxlength: '50' %>
+
+    <div class='weight-bold-text'>
+      面積
+    </div>
+    <div class='unic-wrap'>
+      <%= f.text_area :size, class: 'spot-text-unic', placeholder: '例）80' ,maxlength: '7' %>
+      <p class='unic'>坪　</p>
+    </div>
+
+    <div class='weight-bold-text'>
+      価格
+    </div>
+    <div class='unic-wrap'>
+      <%= f.text_area :price, class: 'spot-text-unic', placeholder: '例）1000' ,maxlength: '8' %>
+      <p class='unic'>
+        万円</p>
+    </div>
+
+    <div class='weight-bold-text'>
+      水道管設備
+      <span class='indispensable'>必須</span>
+    </div>
+    <%= f.collection_select(:water_id, Water.all, :id, :name, {},class: 'select-box') %>
+
+    <div class='weight-bold-text'>
+      公図
+      <span class='indispensable'>必須</span>
+    </div>
+    <%= f.collection_select(:officialmap_id, Officialmap.all, :id, :name, {},class: 'select-box') %>
+
+    <div class='weight-bold-text'>
+      謄本
+      <span class='indispensable'>必須</span>
+    </div>
+    <%= f.collection_select(:transcript_id,Transcript.all, :id, :name, {},class: 'select-box') %>
+
+    <div class='weight-bold-text'>
+      物件に関する問い合わせ先
+      <span class='indispensable'>必須</span>
+    </div>
+    <%= f.collection_select(:contact_id, Contact.all, :id, :name, {},class: 'select-box') %>
+
+    <div class='weight-bold-text'>
+    現地写真
+    </div>
+    <div class='image-upload'>
+      <div class='click-upload'>
+      <p>
+      クリックしてファイルをアップロード
+      </p>
+      <%= f.file_field :image,class: 'spot-image' %>
+      </div>
+    </div>
+    <div id='image-list'></div>
+
+    <div class='weight-bold-text'>
+    Fax情報<span>(pdf形式)</span>
+    </div>
+    <div class='image-upload'>
+      <div class='click-upload'>
+      <p>
+      クリックしてファイルをアップロード
+      </p>
+      <%= f.file_field :pdf,class: 'spot-image' %>
+      </div>
+    </div>
+
+    <div class='weight-bold-text'>
+      備考欄
+    </div>
+    <%= f.text_area :explanation, class: 'spot-text-sentence', placeholder: '補足や注意点等(1000字以内)' ,maxlength: '1000' %>
+
+    <div class='post-btn-contents'>
+      <%= f.submit '編集する', class:'spot-btn' %>
+      <%= link_to '削除する', spot_path(@spot.id), method: :delete, class:'delete-btn' %>
+    </div>
+  </div>
+
+  <% end %>
+</div>

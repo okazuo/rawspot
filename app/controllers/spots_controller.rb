@@ -1,6 +1,7 @@
 class SpotsController < ApplicationController
   before_action :authenticate_user!, except: :index
-
+  before_action :get_recode, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_index, only: [:edit, :destroy]
   
   def index
     @spots = Spot.order('created_at DESC')
@@ -20,11 +21,22 @@ class SpotsController < ApplicationController
   end
 
   def show
-    @spot = Spot.find(params[:id])
   end
 
   def edit
-    @spot= Spot.find(params[:id])
+  end
+  
+  def update
+    if @spot.update(spot_params)
+      redirect_to spot_path(params[:id])
+    else
+      render :edit
+    end
+  end
+  
+  def destroy
+    @spot.destroy
+    redirect_to root_path
   end
 
   def search
@@ -39,5 +51,16 @@ class SpotsController < ApplicationController
   private
   def spot_params
     params.require(:spot).permit(:price, :estate_agent, :size, :address, :water_id, :officialmap_id, :transcript_id, :explanation, :contact_id, :image).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    unless current_user.id == @spot.user.id
+      redirect_to root_path
+    end 
+  end
+
+  def get_recode
+    @spot= Spot.find(params[:id])
+    
   end
 end
