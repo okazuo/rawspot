@@ -70,7 +70,7 @@
       <%= link_to '編集 or 削除', edit_spot_path(@spot.id) ,class: 'gray-btn' %>
       <% end %>
       <div class='side-wrap'>
-        <%= link_to '契約する' ,root_path ,class: 'red-btn' %>
+        <%= link_to '契約する' ,spot_orders_path(@spot.id) ,class: 'red-btn' %>
         <%= link_to '取扱不可',root_path ,class: 'blue-btn'  %>
       </div>
     </div>
