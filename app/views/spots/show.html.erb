@@ -1,11 +1,18 @@
 <div class='nav'>
   <div class='show-spot'>
+  <div class='back-color'>
     <div class='photo-size'>
       <% if @spot.image.blank? %>
       <%= image_tag 'noimage.png', class:'show-photo'%>
       <% else %>
       <%= image_tag @spot.image ,class:'show-photo' %>
       <% end %>
+      <% if @spot.order.present? %>
+      <div class="band">
+          <span class='band-line'>[制約済]<%= @spot.order.user.name  %>さん </span><span class='band-line'> おめでとうございます!!!</span>
+      </div>
+      <% end %>
+    </div>
     </div>
     <table class='photo-table'>
       <tr>

@@ -1,6 +1,6 @@
     <%= link_to  spot_path(spot.id) ,class:'spot-link' do%>
+    <div class='spot'>
     <ul class='spot-date'>
-
       <%# 画像 %>
       <li class='left-date'>
         <% if spot.image.blank? %>
@@ -11,20 +11,20 @@
       </li>
       <%# 所在地/面積 %>
       <li class='center-date'>
-      <div>
-        <p><span>[所在]</span><%= spot.address %></p>
-        <p><span>[面積]</span>
-        <% if spot.size.blank? %>
-        未定
-        <% else %>
-        <%= spot.size %>坪
-        <% end %></p>
-        <p class = 'explanation-date'><span>[備考]</span><%= spot.explanation %></p>
+        <div>
+          <p><span>[所在]</span><%= spot.address %></p>
+          <p><span>[面積]</span>
+            <% if spot.size.blank? %>
+            未定
+            <% else %>
+            <%= spot.size %>坪
+            <% end %></p>
+          <p class='explanation-date'><span>[備考]</span><%= spot.explanation %></p>
         </div>
       </li>
       <%# 価格/取り扱い業者 %>
       <li class='right-date'>
-      <div>
+        <div>
           <p class='price'>
             <% if spot.price.blank? %>
             価格：未定<br>
@@ -35,8 +35,13 @@
           <p class='company-date'><%= spot.estate_agent %></p>
           <p><span>[登録日時]</span><%= l spot.created_at %></p>
           <p><span>[登録者]</span><%= spot.user.name %></p>
-          </div>
+        </div>
       </li>
-
     </ul>
+      <% if spot.order.present? %>
+      <div class="band">
+        <span class='band-line'>[制約済]<%= spot.order.user.name  %>さん </span><span class='band-line'> おめでとうございます!!!</span>
+      </div>
+      <% end %>
+      </div>
     <% end %>
