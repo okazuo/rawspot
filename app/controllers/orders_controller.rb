@@ -22,6 +22,6 @@ class OrdersController < ApplicationController
   end
 
   def order_params
-    params.require(:order).permit(:customer, :not_tradeable,).merge(user_id: current_user.id, spot_id: @spot.id)
+    params.require(:order).permit(:customer).merge(user_id: current_user.id, spot_id: @spot.id)
   end
 end

@@ -71,7 +71,7 @@
       <% end %>
       <div class='side-wrap'>
         <%= link_to '契約する' ,spot_orders_path(@spot.id) ,class: 'red-btn' %>
-        <%= link_to '取扱不可',root_path ,class: 'blue-btn'  %>
+        <%= link_to '取扱不可',spot_closes_path(@spot.id),class: 'blue-btn'  %>
       </div>
     </div>
   </div>

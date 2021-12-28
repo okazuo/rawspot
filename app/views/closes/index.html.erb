@@ -1,0 +1,12 @@
+<div class='nav'>
+  <div class='close'>
+    <h2>本当に取扱不可にしますか？</h2>
+    <%= form_with model: @close, url: spot_closes_path(@spot.id), class: 'transaction-form',local: true do |f| %>
+      <div class='customer'>
+        <%= f.text_area :not_available, class: 'close-text', placeholder: '日本太郎' %>
+      </div>
+    <p>取り扱い業者に確認した</p>
+      <%= f.submit '取扱不可にする', class:'close-btn' %>
+      <% end %>
+  </div>
+</div>
