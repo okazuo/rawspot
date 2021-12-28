@@ -1,6 +1,6 @@
 class Order < ApplicationRecord
   belongs_to :user
-  has_one :spot
+  belongs_to :spot
 
   validates :customer, presence: true
 end

@@ -8,8 +8,13 @@
       <%= image_tag @spot.image ,class:'show-photo' %>
       <% end %>
       <% if @spot.order.present? %>
-      <div class="band">
+      <div class="red-band">
           <span class='band-line'>[制約済]<%= @spot.order.user.name  %>さん </span><span class='band-line'> おめでとうございます!!!</span>
+      </div>
+      <% end %>
+      <% if @spot.close.present? %>
+      <div class="blue-band">
+        <span>取扱不可</span>
       </div>
       <% end %>
     </div>
