@@ -17,3 +17,5 @@ ja:
         transcript_id: 謄本
         contact_id: 物件に関する問い合わせ先
         explanation: 備考欄
+      order:
+        customer: お客様名

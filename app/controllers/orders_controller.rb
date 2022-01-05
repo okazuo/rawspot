@@ -28,9 +28,6 @@ class OrdersController < ApplicationController
   end
 
   def move_to_index
-    unless current_user.id == @spot.user.id
-      redirect_to root_path
-    end 
     if @spot.order.present? || @spot.close.present?
       redirect_to root_path
     end
