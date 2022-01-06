@@ -1,0 +1,38 @@
+.order-spot{
+  margin: 30px 0;
+  width: 30vw;
+}
+.agreement{
+display: flex;
+flex-direction: column;
+font-size: 20px;
+}
+
+.customer{
+margin-bottom: 30px;
+}
+
+.customer-title{
+font-weight: bold;
+margin-left: 10px;
+}
+
+.customer-text{
+resize: none;
+height: 50px;
+line-height: 47px;
+padding: 0 10px;
+width: calc(100% - 20px);
+}
+
+.employee{
+text-align: center;
+font-weight: bold;
+}
+
+.agreement-btn{
+  background-color: red;
+  color: white;
+  width: 50%; 
+  margin: 0 auto;
+}

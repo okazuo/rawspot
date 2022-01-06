@@ -47,82 +47,82 @@ RSpec.describe Spot, type: :model do
       it '取り扱い業者が存在しなければ登録できない' do
         @spot.estate_agent=''
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("Estate agent can't be blank")
+        expect(@spot.errors.full_messages).to include("取り扱い業者を入力してください")
       end
       it '取り扱い業者が51字以上であれば登録できない' do
         @spot.estate_agent='あいうえお'*10+'あ'
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("Estate agent is too long (maximum is 50 characters)")
+        expect(@spot.errors.full_messages).to include("取り扱い業者は50文字以内で入力してください")
       end
       it '住所が存在しなければ登録できない' do
         @spot.address=''
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("Address can't be blank")
+        expect(@spot.errors.full_messages).to include("物件の所在地を入力してください")
       end
       it '住所が51字以上であれば登録できない' do
         @spot.address='あいうえお'*10+'あ'
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("Address is too long (maximum is 50 characters)")
+        expect(@spot.errors.full_messages).to include("物件の所在地は50文字以内で入力してください")
       end
       it '水道管設備を選択しなければ登録できない' do
         @spot.water_id = 1
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("Water can't be blank")
+        expect(@spot.errors.full_messages).to include("水道管設備を選択してください")
       end
       it '公図を選択しなければ登録できない' do
         @spot.officialmap_id = 1
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("Officialmap can't be blank")
+        expect(@spot.errors.full_messages).to include("公図を選択してください")
       end
       it '謄本を選択しなければ登録できない' do
         @spot.transcript_id = 1
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("Transcript can't be blank")
+        expect(@spot.errors.full_messages).to include("謄本を選択してください")
       end
       it '物件に関する問い合わせ先を選択しなければ登録できない' do
         @spot.contact_id = 1
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("Contact can't be blank")
+        expect(@spot.errors.full_messages).to include("物件に関する問い合わせ先を選択してください")
       end
       it '面積が10000以上であれば登録できない' do
         @spot.size = 10000
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("Size is too long (maximum is 4 characters)")
+        expect(@spot.errors.full_messages).to include("面積は4文字以内で入力してください")
       end
       it '面積が全角では登録できない' do
         @spot.size = '１００'
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("Size is not a number")
+        expect(@spot.errors.full_messages).to include("面積は数値で入力してください")
       end
       it '面積に文字が含まれていれば登録できない' do
         @spot.size = 'あいう'
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("Size is not a number")
+        expect(@spot.errors.full_messages).to include("面積は数値で入力してください")
       end
       it '価格が100000以上であれば登録できない' do
         @spot.price = 100000
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("Price is too long (maximum is 5 characters)")
+        expect(@spot.errors.full_messages).to include("価格は5文字以内で入力してください")
       end
       it '価格が全角であれば登録できない' do
         @spot.price = '１００'
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("Price is not a number")
+        expect(@spot.errors.full_messages).to include("価格は数値で入力してください")
       end
       it '価格に文字が含まれていれば登録できない' do
         @spot.price = '10a'
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("Price is not a number")
+        expect(@spot.errors.full_messages).to include("価格は数値で入力してください")
       end
       it '備考欄が1001字以上であれば登録できない' do
         @spot.explanation = 'あいうえお'*200+'あ'
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("Explanation is too long (maximum is 1000 characters)")
+        expect(@spot.errors.full_messages).to include("備考欄は1000文字以内で入力してください")
       end
       it 'ユーザーが紐づいていないと登録できない' do
         @spot.user = nil
         @spot.valid?
-        expect(@spot.errors.full_messages).to include("User must exist")
+        expect(@spot.errors.full_messages).to include("Userを入力してください")
       end
     end
   end

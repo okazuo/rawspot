@@ -48,6 +48,7 @@ class SpotsController < ApplicationController
     @spots = @q.result.order("created_at DESC")
   end
 
+
   private
   def spot_params
     params.require(:spot).permit(:price, :estate_agent, :size, :address, :water_id, :officialmap_id, :transcript_id, :explanation, :contact_id, :image).merge(user_id: current_user.id)
@@ -57,6 +58,9 @@ class SpotsController < ApplicationController
     unless current_user.id == @spot.user.id
       redirect_to root_path
     end 
+    if @spot.order.present? || @spot.close.present?
+      redirect_to root_path
+    end
   end
 
   def get_recode

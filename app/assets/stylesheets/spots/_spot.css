@@ -77,3 +77,41 @@ color:gray;
 .unit-of-money{
   color: red;
 }
+
+.spot{
+  position: relative;
+}
+
+.red-band {
+  position: absolute;
+  top: calc(50% - 23px);
+  width: 100%;
+  text-align: center;
+  background-color: crimson;
+  opacity: 0.8;
+  color:white;
+  font-size: 30px;
+  font: bold;
+}
+
+.blue-band{
+  position: absolute;
+  top: calc(50% - 23px);
+  width: 100%;
+  text-align: center;
+  background-color: blue;
+  opacity: 0.8;
+  color:white;
+  font-size: 30px;
+  font: bold;
+  letter-spacing: 30px;
+}
+
+.blue-band span{
+  padding-left: 30px;
+}
+
+.band-line{
+  display: inline-block;
+  padding: 0 7px;
+}

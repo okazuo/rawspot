@@ -1,11 +1,24 @@
 <div class='nav'>
   <div class='show-spot'>
-    <div class='photo-size'>
-      <% if @spot.image.blank? %>
-      <%= image_tag 'noimage.png', class:'show-photo'%>
-      <% else %>
-      <%= image_tag @spot.image ,class:'show-photo' %>
-      <% end %>
+    <div class='back-color'>
+      <div class='photo-size'>
+        <% if @spot.image.blank? %>
+        <%= image_tag 'noimage.png', class:'show-photo'%>
+        <% else %>
+        <%= image_tag @spot.image ,class:'show-photo' %>
+        <% end %>
+        <% if @spot.order.present? %>
+        <div class="red-band">
+          <span class='band-line'>[制約済]<%= @spot.order.user.name  %>さん </span><span class='band-line'>
+            おめでとうございます!!!</span>
+        </div>
+        <% end %>
+        <% if @spot.close.present? %>
+        <div class="blue-band">
+          <span>取扱不可</span>
+        </div>
+        <% end %>
+      </div>
     </div>
     <table class='photo-table'>
       <tr>
@@ -66,13 +79,16 @@
 
     <%= link_to '★お気に入り登録★', root_path, class: 'show-favorite' %>
     <div class='show-btn'>
-      <% if @spot.user.id == current_user.id %>
-      <%= link_to '編集 or 削除', edit_spot_path(@spot.id) ,class: 'gray-btn' %>
+
+      <% unless @spot.order.present? || @spot.close.present? %>
+        <% if @spot.user.id == current_user.id %>
+        <%= link_to '編集 or 削除', edit_spot_path(@spot.id) ,class: 'gray-btn' %>
+        <% end %>
+        <div class='side-wrap'>
+          <%= link_to '契約する' ,spot_orders_path(@spot.id) ,class: 'red-btn' %>
+          <%= link_to '取扱不可',spot_closes_path(@spot.id),class: 'blue-btn'  %>
+        </div>
       <% end %>
-      <div class='side-wrap'>
-        <%= link_to '契約する' ,root_path ,class: 'red-btn' %>
-        <%= link_to '取扱不可',root_path ,class: 'blue-btn'  %>
-      </div>
     </div>
   </div>
 </div>
