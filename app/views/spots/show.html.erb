@@ -79,7 +79,6 @@
 
     <%= link_to '★お気に入り登録★', root_path, class: 'show-favorite' %>
     <div class='show-btn'>
-
       <% unless @spot.order.present? || @spot.close.present? %>
         <% if @spot.user.id == current_user.id %>
         <%= link_to '編集 or 削除', edit_spot_path(@spot.id) ,class: 'gray-btn' %>
@@ -89,6 +88,16 @@
           <%= link_to '取扱不可',spot_closes_path(@spot.id),class: 'blue-btn'  %>
         </div>
       <% end %>
+    </div>
+
+    <% @spot.comments.each do |comment| %>
+      <%= comment.text %>
+    <% end %>
+    <div class = 'comment-form' >
+    <%= form_with model: [@spot, @comment] , local: true do |f| %>
+      <%= f.text_area :text, class: 'comment-text' %>
+      <%= f.submit 'コメントする', class: 'comment-submit' %>
+    <% end %>
     </div>
   </div>
 </div>
