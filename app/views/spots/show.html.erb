@@ -90,13 +90,19 @@
       <% end %>
     </div>
 
+    <div id = 'comments'>
     <% @spot.comments.each do |comment| %>
+    <p class = 'comment'>
+      <%= comment.user.name %>:
       <%= comment.text %>
+    </p>
     <% end %>
+    </div>
+    
     <div class = 'comment-form' >
-    <%= form_with model: [@spot, @comment] , local: true do |f| %>
+    <%= form_with model: [@spot, @comment] , local: true , id: 'comment-form' do |f| %>
       <%= f.text_area :text, class: 'comment-text' %>
-      <%= f.submit 'コメントする', class: 'comment-submit' %>
+      <%= f.submit 'コメントする', class: 'comment-submit', data: {disable_with: false}  %>
     <% end %>
     </div>
   </div>

@@ -1,8 +1,10 @@
 class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
+    @spot = Spot.find(params[:spot_id])
     if @comment.save
-      redirect_to spot_path(params[:spot_id])
+      CommentChannel.broadcast_to @spot, { comment: @comment, user: @comment.user }
+      
     end
   end
 
