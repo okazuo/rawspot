@@ -21,6 +21,7 @@ class Spot < ApplicationRecord
   has_one_attached :image
   has_one :order
   has_one :close
+  has_many :comments
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :contact

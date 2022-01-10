@@ -79,16 +79,35 @@
 
     <%= link_to '★お気に入り登録★', root_path, class: 'show-favorite' %>
     <div class='show-btn'>
-
       <% unless @spot.order.present? || @spot.close.present? %>
-        <% if @spot.user.id == current_user.id %>
-        <%= link_to '編集 or 削除', edit_spot_path(@spot.id) ,class: 'gray-btn' %>
-        <% end %>
-        <div class='side-wrap'>
-          <%= link_to '契約する' ,spot_orders_path(@spot.id) ,class: 'red-btn' %>
-          <%= link_to '取扱不可',spot_closes_path(@spot.id),class: 'blue-btn'  %>
-        </div>
+      <% if @spot.user.id == current_user.id %>
+      <%= link_to '編集 or 削除', edit_spot_path(@spot.id) ,class: 'gray-btn' %>
+      <% end %>
+      <div class='side-wrap'>
+        <%= link_to '契約する' ,spot_orders_path(@spot.id) ,class: 'red-btn' %>
+        <%= link_to '取扱不可',spot_closes_path(@spot.id),class: 'blue-btn'  %>
+      </div>
       <% end %>
     </div>
+
+    <%# コメント一覧 %>
+    <div id='comments'>
+      <% @spot.comments.each do |comment| %>
+      <p class='comment'>
+        <span><%= comment.user.name %>:</span>
+        <span><%= comment.text %></span>
+        <span class='comment-time'><%= time_ago_in_words(comment.created_at) %>前</span>
+      </p>
+      <% end %>
+    </div>
+
+    <% unless @spot.order.present? || @spot.close.present? %>
+    <div class='comment-form'>
+      <%= form_with model: [@spot, @comment] , local: true , id: 'comment-form' do |f| %>
+      <%= f.text_area :text, class: 'comment-text' %>
+      <%= f.submit 'コメントする', class: 'comment-submit', data: {disable_with: false}  %>
+      <% end %>
+    </div>
+    <% end %>
   </div>
 </div>

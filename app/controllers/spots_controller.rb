@@ -21,6 +21,8 @@ class SpotsController < ApplicationController
   end
 
   def show
+    @comments = @spot.comments.includes(:user)
+    @comment = Comment.new
   end
 
   def edit
@@ -65,6 +67,5 @@ class SpotsController < ApplicationController
 
   def get_recode
     @spot= Spot.find(params[:id])
-    
   end
 end

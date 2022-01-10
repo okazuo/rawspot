@@ -68,7 +68,7 @@ td{
   border-radius: 5px;
   padding: 2px;
   display: inline-block;
-  margin-top: 6px;
+  margin:6px 0px;
 }
 
 /* 編集、契約、取り扱い不可ボタン */
@@ -100,4 +100,30 @@ td{
 
 .blue-btn{
   background-color:skyblue;
+}
+
+/* コメント一覧 */
+
+.comment{
+  word-wrap: break-word;
+}
+
+.comment-time{
+  display: inline-block;
+  font-size: 13px;
+  color: grey;
+}
+
+.comment-text{
+  width:calc(100% - 100px) ;
+  resize: none;
+  padding: 12px 10px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.comment-submit{
+  justify-content: center;
+  vertical-align: top;
+  height: 50px;
 }
