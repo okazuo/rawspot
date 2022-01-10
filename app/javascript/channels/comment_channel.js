@@ -19,8 +19,9 @@ if (location.pathname.match(/\/spots\/\d/)) {
       // Called when there's incoming data on the websocket for this channel
       const html = `
       <p class = 'comment'>
-      ${data.user.name}: 
-      ${data.comment.text}
+      <span>${data.user.name}:</span>
+      <span>${data.comment.text}</span>
+      <span class='comment-time'>たった今</span>
       </p>`
 
       const comments = document.getElementById('comments')
