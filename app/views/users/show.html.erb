@@ -1,0 +1,12 @@
+<div class='nav'>
+  <div class='spot-list'>
+
+    <p class='number-of-properties'><%= "お気に入りは#{@favorite_list.count}件です" %></p>
+    <ul class='table-title'>
+      <li style='width:25%'>画像</li>
+      <li style='width:50%' , class='none-border'>所在地/面積</li>
+      <li style='width:25%'>価格/取り扱い業者</li>
+    </ul>
+    <%= render partial: "spots/spot", collection: @favorite_list %>
+  </div>
+</div>

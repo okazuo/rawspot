@@ -1,6 +1,6 @@
 <div class='nav'>
   <%= render 'shared/subheader' %>
-  
+
   <% if user_signed_in? %>
   <div class='search-wrap'>
     <%= search_form_for Spot.ransack(params[:q]), url: search_spots_path do |f| %>
@@ -11,11 +11,11 @@
       価格<%= f.number_field :price_gteq ,placeholder: '上限価格', class: 'search-price'%> 万円〜
       <%= f.number_field :price_lteq ,placeholder: '下限価格', class: 'search-price'%> 万円
     </div>
-    <div class = 'search-box'>
-    <label><%= f.check_box :order_customer_blank, class: 'check', include_hidden: false %> 制約済みを表示しない</label>
+    <div class='search-box'>
+      <label><%= f.check_box :order_customer_blank, class: 'check', include_hidden: false %> 制約済みを表示しない</label>
     </div>
-    <div class = 'search-box'>
-    <label><%= f.check_box :close_not_available_blank, class: 'check', include_hidden: false %> 取扱不可を表示しない</label>
+    <div class='search-box'>
+      <label><%= f.check_box :close_not_available_blank, class: 'check', include_hidden: false %> 取扱不可を表示しない</label>
     </div>
     <%= f.submit '検索', class: 'search-btn' %>
     <% end %>
@@ -31,6 +31,6 @@
 
     <%= render partial:'spot', collection: @spots %>
 
-    <% end %>
   </div>
+  <% end %>
 </div>
