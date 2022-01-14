@@ -1,5 +1,4 @@
 class FavoritesController < ApplicationController
-
   before_action :set_spot
   before_action :authenticate_user!   # ログイン中のユーザーのみに許可（未ログインなら、ログイン画面へ移動）
 

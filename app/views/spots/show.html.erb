@@ -77,15 +77,8 @@
       </tr>
     </table>
 
-    <%= link_to spot_favorites_path(@spot), method: :post, remote: true, class: "favorite-btn favorite-spot" do%>
-    おきにいり
-    <% end %>
-    <%= link_to spot_favorites_path(@spot), method: :delete, remote: true, class: "favorite-btn favorite-spot" do%>
-    削除
-    <% end %>
+    <%= render 'favorites/favorite'%>
 
-
-    <%= link_to '★お気に入り登録★', root_path, class: 'show-favorite' %>
     <div class='show-btn'>
       <% unless @spot.order.present? || @spot.close.present? %>
       <% if @spot.user.id == current_user.id %>

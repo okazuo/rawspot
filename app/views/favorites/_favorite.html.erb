@@ -1,0 +1,7 @@
+<div id="favorite_<%= @spot.id %>">
+<% if !Favorite.exists?(user: current_user, spot_id: @spot.id) %>
+    <%= link_to '★お気に入り登録★', spot_favorites_path(@spot), method: :post, remote: true, class: 'show-favorite' %>
+  <% else %>
+    <%= link_to '◆お気に入り解除◆', spot_favorites_path(@spot), method: :delete, remote: true, class: 'show-not-favorite' %>
+<% end %>
+</div>
