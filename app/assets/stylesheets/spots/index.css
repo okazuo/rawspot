@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 /* 検索欄 */
@@ -51,10 +52,10 @@
 .spot-list{
   width: 70vw;
   font-size: 20px;
-  margin-bottom: 20px;
 }
 
 .number-of-properties{
+  margin-top: 20px;
   text-align: center;
   font-size: 25px;
 }
@@ -64,6 +65,7 @@
   background-color: white;
   display: flex;
   width: 100%;
+  margin-bottom: -1px;
 }
 
 .table-title > li{

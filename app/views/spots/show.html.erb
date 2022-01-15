@@ -105,7 +105,7 @@
     <% unless @spot.order.present? || @spot.close.present? %>
     <div class='comment-form'>
       <%= form_with model: [@spot, @comment] , local: true , id: 'comment-form' do |f| %>
-      <%= f.text_area :text, class: 'comment-text' %>
+      <%= f.text_area :text, class: 'comment-text' ,placeholder: '変更や注意点があればコメントを残してください'%>
       <%= f.submit 'コメントする', class: 'comment-submit', data: {disable_with: false}  %>
       <% end %>
     </div>
