@@ -61,6 +61,8 @@ td{
   vertical-align: bottom;
 }
 
+/* お気に入りボタン */
+
 .show-favorite{
   text-decoration: none;
   color: yellow;
@@ -69,6 +71,17 @@ td{
   padding: 2px;
   display: inline-block;
   margin:6px 0px;
+}
+
+.show-not-favorite{
+  text-decoration: none;
+  color: black;
+  background-color: yellow;
+  border-radius: 5px;
+  padding: 2px;
+  display: inline-block;
+  margin:6px 0px;
+  border: solid 1px black;
 }
 
 /* 編集、契約、取り扱い不可ボタン */

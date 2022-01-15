@@ -11,5 +11,5 @@ class User < ApplicationRecord
   has_many :orders
   has_many :closes
   has_many :comments
-  
+  has_many :favorites, dependent: :destroy
 end

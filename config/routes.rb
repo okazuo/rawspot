@@ -8,5 +8,9 @@ Rails.application.routes.draw do
     resources :orders, only: [:index, :create]
     resources :closes, only: [:index, :create]
     resources :comments , only: :create
+    resource :favorites, only: [:create, :destroy]
+  end
+  resources :users, only: :show do
+    get :favorites, on: :collection
   end
 end

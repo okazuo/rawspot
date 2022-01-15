@@ -1,7 +1,7 @@
   <div class='sub-title'>
     <% if user_signed_in? %>
     <ul class='top-lists'>
-      <li><%= link_to root_path, class: 'top-title' do %>
+      <li><%= link_to user_path(current_user.id), class: 'top-title' do %>
         <%=current_user.name%>さん<br>マイページ
         <% end %></li>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'top-title' %></li>
