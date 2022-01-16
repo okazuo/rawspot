@@ -3,10 +3,10 @@
       <ul class='spot-date'>
         <%# 画像 %>
         <li class='left-date'>
-          <% if spot.image.blank? %>
+          <% if spot.images[0].blank? %>
           <%= image_tag 'noimage.png', class:'photo'%>
           <% else %>
-          <%= image_tag spot.image, class:'photo'%>
+          <%= image_tag spot.images[0], class:'photo'%>
           <% end %>
         </li>
         <%# 所在地/面積 %>

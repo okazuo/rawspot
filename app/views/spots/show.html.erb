@@ -2,10 +2,10 @@
   <div class='show-spot'>
     <div class='back-color'>
       <div class='photo-size'>
-        <% if @spot.image.blank? %>
+        <% if @spot.images[0].blank? %>
         <%= image_tag 'noimage.png', class:'show-photo'%>
         <% else %>
-        <%= image_tag @spot.image ,class:'show-photo' %>
+        <%= image_tag @spot.images[0] ,class:'show-photo' %>
         <% end %>
         <% if @spot.order.present? %>
         <div class="red-band">
@@ -20,16 +20,24 @@
         <% end %>
       </div>
     </div>
+
     <table class='photo-table'>
       <tr>
-        <% if @spot.image.blank? %>
-        <td class='small-photo'><%= image_tag 'noimage.png' ,class:'small-image' %></td>
+        <% if @spot.images.blank? %>
+          <td class='small-photo'><%= image_tag 'noimage.png' ,class:'small-image' %></td>
+          <td class='small-photo'></td>
+          <td class='small-photo'></td>
+          <td class='small-photo'></td>
         <% else %>
-        <td class='small-photo'><%= image_tag @spot.image ,class:'small-image' %></td>
-        <% end %>
-        <td class='small-photo'></td>
-        <td class='small-photo'></td>
-        <td class='small-photo'></td>
+          <% @spot.images[0..-1].each_with_index do |image,count| %>
+            <td class='small-photo'><%= image_tag image, class:'small-image' %></td>
+            <% @count = count %>
+          <% end %>
+          <% @count = (3 - @count) %>
+          <% @count.times do %>
+            <td class='small-photo'></td>
+          <% end %>
+        <% end%>
       </tr>
     </table>
 
