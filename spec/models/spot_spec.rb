@@ -27,7 +27,7 @@ RSpec.describe Spot, type: :model do
         expect(@spot).to be_valid
       end
       it '写真が存在しなくても登録できる' do
-        @spot.image= nil
+        @spot.images= nil
         expect(@spot).to be_valid
       end
       it '備考が存在しなくても登録できる' do
@@ -37,7 +37,7 @@ RSpec.describe Spot, type: :model do
       it '面積、価格、写真、備考が存在しなくても登録できる' do
         @spot.size= ''
         @spot.price= ''
-        @spot.image= nil
+        @spot.images= nil
         @spot.explanation= ''
         expect(@spot).to be_valid
       end
