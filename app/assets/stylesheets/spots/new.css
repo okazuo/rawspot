@@ -60,9 +60,16 @@ margin-top: -5px;
   margin-bottom: 10px;
 }
 
-.preview-size{
+.preview-image{
   margin-top: 10px;
   width:100%;
+}
+
+.image-delete-button {
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
+  margin-top: -6px;
 }
 
 .weight-bold-text>span{

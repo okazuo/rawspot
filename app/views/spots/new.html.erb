@@ -2,7 +2,7 @@
   <h1 class='new-spot-title'>
     物件の情報を入力
   </h1>
-  <%= form_with model: @spot, local: true do |f| %>
+  <%= form_with model: @spot, id: 'new_spot', local: true do |f| %>
 
   <%= render 'shared/error_messages', model: f.object %>
 
@@ -66,12 +66,12 @@
     <div class='image-upload'>
       <div class='click-upload'>
       <p>
-      クリックしてファイルをアップロード
+      最初の選択ファイルがトップ画像
       </p>
-      <%= f.file_field :image,class: 'spot-image' %>
+      <%= f.file_field :images, name: 'spot[images][]', data: {index: 0},class: 'spot-image' %>
       </div>
     </div>
-    <div id='image-list'></div>
+     <div id="previews"></div>
 
     <div class='weight-bold-text'>
     Fax情報<span>(pdf形式)</span>
@@ -79,7 +79,7 @@
     <div class='image-upload'>
       <div class='click-upload'>
       <p>
-      クリックしてファイルをアップロード
+      pdfファイルをアップロード
       </p>
       <%= f.file_field :pdf,class: 'spot-image' %>
       </div>
