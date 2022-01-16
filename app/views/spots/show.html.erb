@@ -29,16 +29,16 @@
           <td class='small-photo'></td>
           <td class='small-photo'></td>
         <% else %>
+          <% @count = 0 %>
           <% @spot.images[1..-1].each_with_index do |image,count| %>
             <td class='small-photo'>
-            <% @count = 0 %>
             <%= link_to image, "data-lightbox" => image do %>
               <%= image_tag image, class:'small-image'%>
             <% end %>
             </td>
             <% @count = count %>
           <% end %>
-          <% @count = (3-@count) %>
+          <% @count = 3-@count %>
           <% @count.times do %>
             <td class='small-photo'></td>
           <% end %>
