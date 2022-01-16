@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
   // 新規投稿・編集ページのみ発火する
   if (!spotForm) return null;
 
-  const imageLimits = 4;
+  const imageLimits = 5;
 
   // プレビュー画像を生成・表示する関数
   const buildPreviewImage = (dataIndex, blob) =>{

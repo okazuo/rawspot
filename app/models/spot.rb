@@ -7,7 +7,7 @@ class Spot < ApplicationRecord
 
   validates :size, numericality: true, allow_blank: true, length: { maximum: 4 }
   validates :price, numericality: true, allow_blank: true, length: { maximum: 5 }
-  validates :images, length: {maximum: 4, massage: 'は４枚以下にしてください'}
+  validates :images, length: {maximum: 5, massage: 'は４枚以下にしてください'}
 
   with_options numericality: { other_than: 1, message: "を選択してください" } do
     validates :water_id
