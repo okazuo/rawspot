@@ -23,7 +23,7 @@
 
     <table class='photo-table'>
       <tr>
-        <% if @spot.images.blank? %>
+        <% if @spot.images[1].blank? %>
           <td class='small-photo'><%= image_tag 'noimage.png' ,class:'small-image' %></td>
           <td class='small-photo'></td>
           <td class='small-photo'></td>
