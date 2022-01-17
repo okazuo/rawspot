@@ -11,9 +11,11 @@ class Spot < ApplicationRecord
   validate :faxdate_file_type
 
   def faxdate_file_type
+    if faxdate.present?
       if !faxdate.content_type.in?(%(application/pdf))
         errors.add(:faxdate, 'はpdf形式にしてください')
       end
+    end
   end
 
   with_options numericality: { other_than: 1, message: "を選択してください" } do

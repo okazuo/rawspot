@@ -34,11 +34,16 @@ RSpec.describe Spot, type: :model do
         @spot.explanation= ''
         expect(@spot).to be_valid
       end
-      it '面積、価格、写真、備考が存在しなくても登録できる' do
+      it 'Fax情報が存在しなくても登録できる' do
+        @spot.faxdate= nil
+        expect(@spot).to be_valid
+      end
+      it '面積、価格、写真、備考 fax情報が存在しなくても登録できる' do
         @spot.size= ''
         @spot.price= ''
         @spot.images= nil
         @spot.explanation= ''
+        @spot.faxdate= nil
         expect(@spot).to be_valid
       end
     end
@@ -123,6 +128,11 @@ RSpec.describe Spot, type: :model do
         @spot.user = nil
         @spot.valid?
         expect(@spot.errors.full_messages).to include("Userを入力してください")
+      end
+      it 'Fax情報がpdf形式以外では登録できない' do
+        @spot.faxdate.attach(io:File.open('public/images/サンプル画像.jpeg'),filename: 'サンプル画像.jpeg')
+        @spot.valid?
+        expect(@spot.errors.full_messages).to include("Fax情報はpdf形式にしてください")
       end
     end
   end
