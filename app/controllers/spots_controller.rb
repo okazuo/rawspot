@@ -53,7 +53,7 @@ class SpotsController < ApplicationController
 
   private
   def spot_params
-    params.require(:spot).permit(:price, :estate_agent, :size, :address, :water_id, :officialmap_id, :transcript_id, :explanation, :contact_id,  {images: []}).merge(user_id: current_user.id)
+    params.require(:spot).permit(:price, :estate_agent, :size, :address, :water_id, :officialmap_id, :transcript_id, :explanation, :contact_id, :faxdate,  {images: []}).merge(user_id: current_user.id)
   end
 
   def move_to_index

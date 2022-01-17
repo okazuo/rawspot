@@ -13,6 +13,7 @@ FactoryBot.define do
 
     after(:build) do |spot|
       spot.images.attach(io:File.open('public/images/サンプル画像.jpeg'),filename: 'サンプル画像.jpeg')
+      spot.faxdate.attach(io:File.open('public/application/サンプルデータ.pdf'),filename: 'サンプルデータ.pdf')
     end
   end
 end
