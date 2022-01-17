@@ -81,7 +81,6 @@ ActiveRecord::Schema.define(version: 2022_01_12_082258) do
     t.integer "officialmap_id"
     t.integer "transcript_id"
     t.text "explanation"
-    t.string "pdf"
     t.integer "contact_id"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false

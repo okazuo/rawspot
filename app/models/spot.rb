@@ -25,6 +25,7 @@ class Spot < ApplicationRecord
   has_many :comments
   belongs_to :user, optional: true
   has_many :favorites, dependent: :destroy
+  has_one_attached :pdf
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :contact

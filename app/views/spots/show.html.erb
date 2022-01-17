@@ -86,9 +86,11 @@
       </tr>
       <tr>
         <th>備考欄</th>
-        <td colspan='3'><%= @spot.explanation %></td>
+        <td colspan='3'><%= @spot.explanation %><%= link_to 'FAX 確認', rails_blob_path(@spot.pdf), class: 'fax-btn'%></td>
       </tr>
     </table>
+
+      
 
     <%= render 'favorites/favorite'%>
 
