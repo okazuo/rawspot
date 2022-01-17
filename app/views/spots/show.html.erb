@@ -50,8 +50,8 @@
       <tr>
         <th>取り扱い業者</th>
         <td colspan='3'><%= @spot.estate_agent %>
-        <% if @spot.pdf.present? %>
-          <%= link_to 'FAX情報 確認', rails_blob_path(@spot.pdf), class: 'fax-btn'%>
+        <% if @spot.faxdate.present? %>
+          <%= link_to 'FAX情報 確認', rails_blob_path(@spot.faxdate), class: 'fax-btn'%>
         <% end %></td>
       </tr>
       <tr>
