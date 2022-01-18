@@ -35,10 +35,6 @@ th{
   width: 100px;
 }
 
-td{
-  width: calc(100% - 200px);
-}
-
 .margin-table{
   margin: -1px auto;
 }
