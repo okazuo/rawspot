@@ -1,1 +1,21 @@
-hellow would
+<div class='nav'>
+  <div class='spot-list'>
+  <h1>契約状況</h2>
+    <table>
+      <tr>
+        <th>契約日</th>
+        <th>担当営業</th>
+        <th>登録者</th>
+        <th>登録日</th>
+      </tr>
+      <% @orderlist.each do |spot|%>
+      <tr>
+        <td><%= l spot.order.created_at %></td>
+        <td><%= spot.order.user.name %></td>
+        <td><%= spot.user.name %></td>
+        <td><%= l spot.created_at %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
