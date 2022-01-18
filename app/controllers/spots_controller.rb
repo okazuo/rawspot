@@ -51,9 +51,8 @@ class SpotsController < ApplicationController
   end
 
   def detail
-    orderlist = Order.all.pluck(:spot_id)
-    @orderlist = Spot.where(id: orderlist).order('created_at desc')
-    
+    @q = Spot.ransack(params[:q])
+    @spots = @q.result.order("created_at DESC")
   end
 
   private
