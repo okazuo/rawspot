@@ -9,7 +9,7 @@
         <% end %>
         <% if @spot.order.present? %>
         <div class="red-band">
-          <span class='band-line'>[制約済]<%= @spot.order.user.name  %>さん </span><span class='band-line'>
+          <span class='band-line'>[<%= @spot.order.customer%>様 成約済み]<%= @spot.order.user.name  %>さん </span><span class='band-line'>
             おめでとうございます!!!</span>
         </div>
         <% end %>
