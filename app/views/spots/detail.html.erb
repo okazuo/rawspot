@@ -1,24 +1,26 @@
 <div class='nav'>
   <div class='spot-list'>
-    <h1>契約状況</h2>
-      <table>
-        <tr>
-          <th><%= sort_link(@q, :order_created_at, "契約日" )%></th>
-          <th><%= sort_link(@q, :order_user_name, "担当営業" )%></th>
-          <th><%= sort_link(@q, :user_name, "登録者" )%></th>
-          <th><%= sort_link(@q, :created_at, "登録日" )%></th>
-        </tr>
-        <% @spots.each do |spot|%>
-        <tr>
-          <% if spot.order.present? %>
-          <td><%= l spot.order.created_at %></td>
-          <td><%= spot.order.user.name%></td>
-          <td><%= spot.user.name %></td>
-          <td><%= l spot.created_at %></td>
-          <% end %>
-
-        </tr>
+    <p class='detail-title'><span>
+      契約状況</span>
+    </p>
+    <table class='detail-table'>
+      <tr>
+        <th><%= sort_link(@q, :order_created_at, "契約日" )%></th>
+        <th><%= sort_link(@q, :order_user_name, "担当営業" )%></th>
+        <th><%= sort_link(@q, :user_name, "登録者" )%></th>
+        <th><%= sort_link(@q, :created_at, "登録日" )%></th>
+      </tr>
+        
+      <% @spots.each do |spot|%>
+      <tr>
+        <% if spot.order.present? %>
+        <td><%= link_to spot_path(spot.id) ,class: 'detail-spot' do %><%= l spot.order.created_at %><% end %></td>
+        <td><%= link_to spot_path(spot.id) ,class: 'detail-spot' do %><%= spot.order.user.name%><% end %></td>
+        <td><%= link_to spot_path(spot.id) ,class: 'detail-spot' do %><%= spot.user.name %><% end %></td>
+        <td><%= link_to spot_path(spot.id) ,class: 'detail-spot' do %><%= l spot.created_at %><% end %></td>
         <% end %>
-      </table>
+      </tr>
+      <% end %>
+    </table>
   </div>
 </div>
