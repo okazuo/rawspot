@@ -32,7 +32,6 @@ class Spot < ApplicationRecord
   has_one :order
   has_one :close
   has_many :comments
-  belongs_to :user, optional: true
   has_many :favorites, dependent: :destroy
   has_one_attached :faxdate
 

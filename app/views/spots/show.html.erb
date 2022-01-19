@@ -9,7 +9,7 @@
         <% end %>
         <% if @spot.order.present? %>
         <div class="red-band">
-          <span class='band-line'>[制約済]<%= @spot.order.user.name  %>さん </span><span class='band-line'>
+          <span class='band-line'>[<%= @spot.order.customer%>様 成約済み]</span><span class='band-line'><%= @spot.order.user.name  %>さん 
             おめでとうございます!!!</span>
         </div>
         <% end %>
@@ -46,7 +46,7 @@
       </tr>
     </table>
 
-    <table>
+    <table class='show-table'>
       <tr>
         <th>取り扱い業者</th>
         <td colspan='3'><%= @spot.estate_agent %>
@@ -68,7 +68,7 @@
       </tr>
     </table>
 
-    <table>
+    <table class='show-table'>
       <tr>
         <th>公図</th>
         <td><%= @spot.officialmap.name %></td>

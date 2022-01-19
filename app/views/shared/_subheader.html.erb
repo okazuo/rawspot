@@ -5,6 +5,7 @@
         <%=current_user.name%>さん<br>マイページ
         <% end %></li>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'top-title' %></li>
+      <li><%= link_to '契約状況',  detail_spots_path, class: 'top-title' %></li>
       <li><%= link_to '売地を登録する', new_spot_path, class: 'top-title' %></li>
     </ul>
     <% else %>

@@ -50,6 +50,10 @@ class SpotsController < ApplicationController
     @spots = @q.result.order("created_at DESC")
   end
 
+  def detail
+    @q = Spot.ransack(params[:q])
+    @spots = @q.result.order("created_at DESC")
+  end
 
   private
   def spot_params

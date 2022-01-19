@@ -40,7 +40,7 @@
       </ul>
       <% if spot.order.present? %>
       <div class="red-band">
-        <span class='band-line'>[制約済]<%= spot.order.user.name  %>さん </span><span class='band-line'> おめでとうございます!!!</span>
+        <span class='band-line'>[<%= spot.order.customer%>様 成約済]</span><span class='band-line'><%= spot.order.user.name  %>さん  おめでとうございます!!!</span>
       </div>
       <% end %>
       <% if spot.close.present? %>

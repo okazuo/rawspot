@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :spots do
     collection do
       get "search"
+      get "detail"
     end
     resources :orders, only: [:index, :create]
     resources :closes, only: [:index, :create]
