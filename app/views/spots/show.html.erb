@@ -21,22 +21,20 @@
       </div>
     </div>
 
-
-  <style>
+    <%# googlemap %>
+    <style>
       #map {
           height: 400px;
           width: 400px;
       }
-  </style>
-
-  <script>
+    </style>
+    <script>
     let map
     let marker
     let uluru
     function initMap() {
       geocoder = new google.maps.Geocoder()
-      uluru = {lat: <%= @lat %>,lng: <%= @lng %>}
-      console.log(uluru)
+      uluru = {lat: <%= @spot.latitude || 0 %>, lng: <%= @spot.longitude || 0 %>}
       map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
         center: uluru
@@ -46,12 +44,11 @@
         map: map,
       });
     };
-
-  </script>
-  <script
+    </script>
+    <script
       src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_KEY'] %>&callback=initMap"  
       async defer>
-  </script>
+    </script>
     <div id='map'></div>
 
     <table class='photo-table'>

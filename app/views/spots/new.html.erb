@@ -3,13 +3,13 @@
     物件の情報を入力
   </h1>
 
+  <%# googlemap %>
   <style>
       #map {
           height: 400px;
           width: 400px;
       }
   </style>
-
   <script>
     let map
     let geocoder
@@ -17,7 +17,7 @@
     let uluru
     function initMap() {
       geocoder = new google.maps.Geocoder()
-      uluru = {lat: <%= @lat %>,lng: <%= @lng %>}
+      uluru = {lat: <%= @spot.latitude || 0 %>, lng: <%= @spot.longitude || 0 %>}
       map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
         center: uluru
@@ -34,7 +34,6 @@
         document.getElementById('spot_longitude').value = ev.latLng.lng();
       });
     }
-
       function codeAddress(){
       // 入力された住所を取得
       let inputAddress = document.getElementById('access').value;
@@ -42,7 +41,7 @@
       geocoder.geocode( { 'address': inputAddress}, function(results, status) {
         if (status == 'OK') {
           uluru = results[0].geometry.location;
-    　　　 // map.setCenterで地図が移動
+         // map.setCenterで地図が移動
           // google.maps.MarkerでGoogleMap上の指定位置にマーカが立つ
           map.setCenter(uluru);
           marker.setPosition(uluru);
@@ -72,7 +71,7 @@
       物件の所在地
       <span class='indispensable'>必須</span>
     </div>
-    <%= f.text_area :address, class: 'spot-text', placeholder: '都道府県から入力' ,maxlength: '50' ,id: "access" ,type: "textbox" ,value: "" %>
+    <%= f.text_area :address, class: 'spot-text', placeholder: '都道府県から入力' ,maxlength: '50' ,id: "access" %>
     
     <input type="button" value="地図を表示" onclick="codeAddress()">
     <%= f.text_field :latitude, type:'hidden' %>
