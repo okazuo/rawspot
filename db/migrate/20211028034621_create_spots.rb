@@ -10,8 +10,9 @@ class CreateSpots < ActiveRecord::Migration[6.0]
       t.integer :transcript_id
       t.text :explanation
       t.integer :contact_id
+      t.float :latitude
+      t.float :longitude
       t.references :user, null: false, foregign_key: true
-
       t.timestamps
     end
   end
