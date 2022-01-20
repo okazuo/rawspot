@@ -5,12 +5,15 @@ class SpotsController < ApplicationController
   
   def index
     @spots = Spot.order('created_at DESC')
+    @spot = Spot.new
   end
 
   def new
     @spot = Spot.new
+    @lat = 35.6458437
+    @lng = 139.7046171
   end
-  
+
   def create
     @spot= Spot.new(spot_params)
     if @spot.save
@@ -19,10 +22,12 @@ class SpotsController < ApplicationController
       render :new
     end
   end
-
+  
   def show
     @comments = @spot.comments.includes(:user)
     @comment = Comment.new
+    @lat = @spot.latitude
+    @lng = @spot.longitude
   end
 
   def edit
@@ -57,7 +62,7 @@ class SpotsController < ApplicationController
 
   private
   def spot_params
-    params.require(:spot).permit(:price, :estate_agent, :size, :address, :water_id, :officialmap_id, :transcript_id, :explanation, :contact_id, :faxdate,  {images: []}).merge(user_id: current_user.id)
+    params.require(:spot).permit(:price, :estate_agent, :size, :address, :water_id, :officialmap_id, :transcript_id, :explanation, :contact_id, :latitude, :longitude, :faxdate,  {images: []}).merge(user_id: current_user.id)
   end
 
   def move_to_index
