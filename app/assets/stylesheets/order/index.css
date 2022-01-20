@@ -1,6 +1,6 @@
 .order-spot{
   margin: 30px 0;
-  width: 30vw;
+  width: 45vw;
 }
 .agreement{
 display: flex;
@@ -32,7 +32,11 @@ font-weight: bold;
 
 .agreement-btn{
   background-color: red;
-  color: white;
-  width: 50%; 
   margin: 0 auto;
+  cursor: pointer;
+  color: white;
+  padding: 0.5vh 5vw;
+  font-size: 25px;
+  border-radius: 5px;
+  border: solid 1px black;
 }

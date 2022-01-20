@@ -11,13 +11,13 @@
       取り扱い業者
       <span class='indispensable'>必須</span>
     </div>
-    <%= f.text_area :estate_agent, class: 'spot-text', placeholder: '不動産屋もしくは地主の名前' ,maxlength: '50' %>
+    <%= f.text_field :estate_agent, class: 'spot-text', placeholder: '不動産屋もしくは地主の名前' ,maxlength: '50' %>
 
     <div class='weight-bold-text'>
       物件の所在地
       <span class='indispensable'>必須</span>
     </div>
-    <%= f.text_area :address, class: 'spot-text', placeholder: '都道府県から入力' ,maxlength: '50', id: "access"  %>
+    <%= f.text_field :address, class: 'spot-text', placeholder: '都道府県から入力' ,maxlength: '50', id: "access"  %>
 
     <%# googlemap %>
     <%= render 'map'%>
@@ -30,7 +30,7 @@
       面積
     </div>
     <div class='unic-wrap'>
-      <%= f.text_area :size, class: 'spot-text-unic', placeholder: '例）80' ,maxlength: '7' %>
+      <%= f.text_field :size, class: 'spot-text-unic', placeholder: '例）80' ,maxlength: '7' %>
       <p class='unic'>坪　</p>
     </div>
 
@@ -38,7 +38,7 @@
       価格
     </div>
     <div class='unic-wrap'>
-      <%= f.text_area :price, class: 'spot-text-unic', placeholder: '例）1000' ,maxlength: '8' %>
+      <%= f.text_field :price, class: 'spot-text-unic', placeholder: '例）1000' ,maxlength: '8' %>
       <p class='unic'>
         万円</p>
     </div>
@@ -98,7 +98,7 @@
     <%= f.text_area :explanation, class: 'spot-text-sentence', placeholder: '補足や注意点等(1000字以内)' ,maxlength: '1000' %>
 
     <div class='post-btn-contents'>
-      <%= f.submit '編集する', class:'spot-btn' %>
+      <%= f.submit '編集する', class:'spot-btn' ,type: 'button'%>
       <%= link_to '削除する', spot_path(@spot.id), method: :delete, class:'delete-btn' %>
     </div>
   </div>

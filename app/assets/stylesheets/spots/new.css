@@ -1,6 +1,7 @@
 .spot-main{
-  width: 35vw;
+  width: 45vw;
   margin:30px auto 40px;
+  font-size: 16px;
 }
 
 .new-spot-title{
@@ -23,17 +24,13 @@
 
 .spot-text{
   width: 100%;
-  resize: none;
   padding: 12px 10px;
-  height: 50px;
   box-sizing: border-box;
 }
 
 .spot-text-unic{
   width: calc(100% - 35px);
-  resize: none;
   padding: 12px 10px;
-  height: 50px;
   box-sizing: border-box;
   text-align: right;
 }
@@ -67,6 +64,10 @@ margin-top: -5px;
   margin-bottom: 10px;
 }
 
+.spot-image{
+  width: 100%;
+}
+
 .preview-image{
   margin-top: 10px;
   width:100%;
@@ -93,7 +94,6 @@ margin-top: -5px;
   margin-bottom: 30px;
 }
 
-
 .spot-btn{
   display: block;
   box-sizing: border-box;
@@ -104,7 +104,7 @@ margin-top: -5px;
   margin: 0 auto;
   font-size: 25px;
   border-radius: 5px;
-
+  cursor: pointer;
 }  
 
 .back-btn{

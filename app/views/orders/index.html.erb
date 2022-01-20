@@ -2,22 +2,21 @@
   <div class='order-spot'>
 
     <%= form_with model: @order, url: spot_orders_path(@spot.id), class: 'transaction-form',local: true do |f| %>
-    <%= render 'shared/error_messages',model: f.object %>
-    <div class='agreement'>
-      <div class='customer'>
-        <div class='customer-title'>
-          お客様名
-          <span class='indispensable'>必須</span>
+      <%= render 'shared/error_messages',model: f.object %>
+      <div class='agreement'>
+        <div class='customer'>
+          <div class='customer-title'>
+            お客様名
+            <span class='indispensable'>必須</span>
+          </div>
+          <%= f.text_area :customer, class: 'customer-text', placeholder: '小泉 孝太郎' %>
         </div>
-        <%= f.text_area :customer, class: 'customer-text', placeholder: '日本太郎' %>
+        <div class='employee'>
+          担当営業
+          <%= current_user.name %>
+        </div>
+        <%= f.submit '契約する', class:'agreement-btn' %>
       </div>
-      <div class='employee'>
-        担当営業
-        <%= current_user.name %>
-      </div>
-
-      <%= f.submit '契約する', class:'agreement-btn' %>
-      <% end %>
-    </div>
+    <% end %>
   </div>
 </div>
