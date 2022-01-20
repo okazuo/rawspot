@@ -9,6 +9,13 @@
   font-weight: bold;
 }
 
+/* 地図 */
+#map{
+  height: 400px;
+  width: 100%;
+  margin-bottom:25px ;
+}
+
 .weight-bold-text{
   font-weight: bold;
   margin: 30px 0 5px 10px;
