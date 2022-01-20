@@ -10,8 +10,8 @@ class SpotsController < ApplicationController
 
   def new
     @spot = Spot.new
-    @lat = 35.6458437
-    @lng = 139.7046171
+    @spot.latitude = 35.6458437
+    @spot.longitude = 139.7046171
   end
 
   def create
@@ -26,10 +26,8 @@ class SpotsController < ApplicationController
   def show
     @comments = @spot.comments.includes(:user)
     @comment = Comment.new
-    @lat = @spot.latitude
-    @lng = @spot.longitude
   end
-
+  
   def edit
   end
   
