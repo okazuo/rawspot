@@ -38,7 +38,7 @@ margin: 15px 0;
 }
 
 .spot-text{
-  width: calc(100% - 200px);
+  width: calc(70vw - 200px);
   padding: 12px 10px;
   box-sizing: border-box;
   display: block;

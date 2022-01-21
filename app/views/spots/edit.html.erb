@@ -6,7 +6,6 @@
 
     <%= form_with model: @spot, id: 'new_spot', local: true do |f| %>
     <%= render 'shared/error_messages', model: f.object %>
-    <div class='spot-explain'>
       <div class='one-spot'>
         <div class='weight-bold-text'>
           取り扱い業者
@@ -26,8 +25,8 @@
       <%# googlemap %>
       <%= render 'map'%>
       <input type="button" value="住所から地図を検索" onclick="codeAddress()" class='map-btn'>
-      <%= f.text_field :latitude %>
-      <%= f.text_field :longitude %>
+      <%= f.text_field :latitude, type:'hidden' %>
+      <%= f.text_field :longitude, type:'hidden' %>
       <div id='map'></div>
 
       <div class='two-spot'>
@@ -117,8 +116,6 @@
         <%= f.submit '編集する', class:'spot-btn' ,type: 'button', onClick: 'submit();' %>
         <%= link_to '削除する', spot_path(@spot.id), method: :delete, class:'delete-btn' %>
       </div>
-    </div>
-
     <% end %>
   </div>
 </div>
