@@ -6,21 +6,17 @@
 
 .close h2{
   margin-bottom: 50px;
-
 }
 
-
 .close-btn{
-  text-decoration: none;
-  display:inline-block;
   background-color:skyblue;
-  color: white;
-  width: 80%;
-  height: 50px;
-  line-height: 50px;
-  border: 1px solid black;
-  border-radius: 5px;
+  margin: 0 auto;
   cursor: pointer;
+  color: white;
+  padding: 0.5vh 5vw;
+  font-size: 25px;
+  border-radius: 5px;
+  border: solid 1px black;
 }
 
 .close-text{
