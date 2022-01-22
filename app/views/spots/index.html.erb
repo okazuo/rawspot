@@ -1,8 +1,6 @@
 <div class='nav'>
-  <%= render 'shared/subheader' %>
-
+  <%=render'shared/subheader'%>
   <% if user_signed_in? %>
-
     <div class='search-wrap'>
       <%= search_form_for Spot.ransack(params[:q]), url: search_spots_path do |f| %>
         <div class='search-field'>

@@ -149,3 +149,10 @@ th{
   vertical-align: top;
   height: 50px;
 }
+
+.space{
+  height: 20px;
+}
+.comment-form{
+  margin-bottom: 20px;
+}
