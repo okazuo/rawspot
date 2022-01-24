@@ -1,13 +1,14 @@
 class Spot < ApplicationRecord
+
   with_options presence: true do
     validates :estate_agent, length: { maximum: 50 }
     validates :address, length: { maximum: 50 }
-
   end
 
   validates :size, numericality: true, allow_blank: true, length: { maximum: 4 }
   validates :price, numericality: true, allow_blank: true, length: { maximum: 5 }
   validates :images, length: {maximum: 5, massage: 'は5枚以下にしてください'}
+  validates :explanation, length: { maximum: 1000 }
   validate :faxdate_file_type
 
   def faxdate_file_type
@@ -25,15 +26,16 @@ class Spot < ApplicationRecord
     validates :contact_id
   end
 
-  validates :explanation, length: { maximum: 1000 }
 
   belongs_to :user
   has_many_attached :images
   has_one :order
   has_one :close
   has_many :comments
-  has_many :favorites, dependent: :destroy
   has_one_attached :faxdate
+  # 中間テーブル
+  has_many :favorites, dependent: :destroy
+  has_many :users, through: :favorites
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :contact

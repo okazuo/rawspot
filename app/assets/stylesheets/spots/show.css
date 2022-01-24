@@ -40,7 +40,7 @@ th{
 }
 
 .photo-table{
-  margin: 30px 0;
+  margin: 25px 0;
 }
 
 .small-photo{
@@ -148,4 +148,11 @@ th{
   justify-content: center;
   vertical-align: top;
   height: 50px;
+}
+
+.space{
+  height: 20px;
+}
+.comment-form{
+  margin-bottom: 20px;
 }

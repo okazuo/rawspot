@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 2022_01_12_082258) do
   end
 
   create_table "closes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "not_available"
     t.bigint "user_id", null: false
     t.bigint "spot_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -82,6 +81,8 @@ ActiveRecord::Schema.define(version: 2022_01_12_082258) do
     t.integer "transcript_id"
     t.text "explanation"
     t.integer "contact_id"
+    t.decimal "latitude", precision: 9, scale: 6
+    t.decimal "longitude", precision: 9, scale: 6
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

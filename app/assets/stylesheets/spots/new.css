@@ -1,6 +1,7 @@
 .spot-main{
-  width: 35vw;
+  width: 70vw;
   margin:30px auto 40px;
+  font-size: 16px;
 }
 
 .new-spot-title{
@@ -9,55 +10,118 @@
   font-weight: bold;
 }
 
+/* 地図 */
+#map{
+  height: 400px;
+  width: 100%;
+  margin-bottom:25px ;
+}
+
+.map-btn{
+  display: block;
+  margin: 0 auto;
+  padding:7px 10px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.one-spot{
+display: flex;
+justify-content: space-between;
+margin: 15px 0;
+}
+
+
 .weight-bold-text{
   font-weight: bold;
-  margin: 30px 0 5px 10px;
+  margin: auto 0;
 }
 
 .spot-text{
-  width: 100%;
-  resize: none;
+  width: calc(70vw - 200px);
   padding: 12px 10px;
-  height: 50px;
   box-sizing: border-box;
+  display: block;
+  height: 50px;
 }
 
-.spot-text-unic{
-  width: calc(100% - 35px);
-  resize: none;
+.two-spot{
+  display: flex;
+  position: relative;
+  margin: 12px 0;
+}
+
+.spot-text-unic, .select-box{
+  display: block;
+  width: calc(35vw - 180px);
   padding: 12px 10px;
-  height: 50px;
   box-sizing: border-box;
   text-align: right;
+  height: 50px;
 }
 
-.unic-wrap{
+.one-wrap{
   display: flex;
+  position: absolute;
+  right: 55%;
+}
+
+.one-wrap-unic{
+  display: flex;
+  position: absolute;
+  right: calc(55% - 16px);
+}
+
+.two-wrap-unic{
+  display: flex;
+  position: absolute;
+  right: -32px;
+}
+.one-title{
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.two-title{
+  font-weight: bold;
+  margin: auto 0;
+  position: absolute;
+  left: 55%;
+  margin: 15px 0;
+}
+
+.two-wrap{
+  display: flex;
+  position: absolute;
+  right: 0;
 }
 
 .unic{
-  padding-top: 13px;
+  margin: auto 0;
 }
 
-.select-box{
-  width: 100%;
-  height: 50px;
-  padding-left: 10px;
-}
-
-.image-upload{
-  width: 100%;
+.file{
+  margin: 30px 0 30px 0;
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: left;
+}
+
+.weight-bold-file{
+  width: 150px;
+  font-weight: bold;
+  margin: auto 0;
 }
 
 .click-upload{
-width: 280px;
-margin-top: -5px;
+  width: 280px;
 }
 
 .click-upload>p{
   margin-bottom: 10px;
+}
+
+.spot-image{
+  width: 280px;
 }
 
 .preview-image{
@@ -86,7 +150,6 @@ margin-top: -5px;
   margin-bottom: 30px;
 }
 
-
 .spot-btn{
   display: block;
   box-sizing: border-box;
@@ -97,14 +160,14 @@ margin-top: -5px;
   margin: 0 auto;
   font-size: 25px;
   border-radius: 5px;
-
+  cursor: pointer;
 }  
 
 .back-btn{
   display: block;
   text-decoration: none;
-  width: 70%;
-  height: 35px;
+  width: 60%;
+  height: 40px;
   text-align: center;
   border-radius: 5px;
   background-color: rgb(165, 165, 165);

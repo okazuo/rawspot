@@ -46,6 +46,10 @@
       </tr>
     </table>
 
+    <%# googlemap %>
+    <%= render'showmap'%>
+    <div id='map'></div>
+
     <table class='show-table'>
       <tr>
         <th>取り扱い業者</th>
@@ -67,7 +71,6 @@
         <td class='price'><%= @spot.price %>万円</td>
       </tr>
     </table>
-
     <table class='show-table'>
       <tr>
         <th>公図</th>
@@ -92,8 +95,6 @@
         <td colspan='3'><%= @spot.explanation %></td>
       </tr>
     </table>
-
-      
 
     <%= render 'favorites/favorite'%>
 

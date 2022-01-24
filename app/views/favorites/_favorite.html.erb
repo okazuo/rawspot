@@ -5,5 +5,7 @@
     <% else %>
     <%= link_to '◆お気に入り解除◆', spot_favorites_path(@spot), method: :delete, remote: true, class: 'show-not-favorite' %>
     <% end %>
+  <% else %>
+  <p class='space'></p>
   <% end %>
 </div>

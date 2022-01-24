@@ -1,5 +1,4 @@
 /* タイトル */
-
 .detail-title{
   margin: 13px 0 10px;
   font-size: 30px;
@@ -8,7 +7,6 @@
   text-shadow: 2px 2px 3px orange;
   position: relative;
   letter-spacing: 15px;
-  
 }
 
 .detail-title:before {
@@ -29,7 +27,6 @@
 }
 
  /* ソースボタン */
-
 .sort_link{
   color: black;
   text-decoration: none;

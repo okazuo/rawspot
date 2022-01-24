@@ -1,27 +1,28 @@
 .form-wrap{
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  margin: 50px 0;
+  width: 40vw;
+  margin: 50px auto;
 }
 
 .form-header-text{
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-
+}
+.form-wrap{
+  font-size: 18px;
 }
 
 .field{
-  margin: 20px 0;
+  margin: 20px auto;
 }
 
 .input-default{
-width: 350px;
-height: 23px;
-resize: none;
-overflow: hidden;
-padding: 13px 15px; 
+  width: 100%;
+  height: 50px;
+  resize: none;
+  overflow: hidden;
+  padding-left: 15px;
+  box-sizing: border-box;
 }
 
 .registrations-btn{
@@ -40,4 +41,5 @@ padding: 13px 15px;
   font-weight: bold;
   padding: 3px;
   border-radius: 4px;
+  vertical-align: middle;
 }
