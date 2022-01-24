@@ -4,25 +4,18 @@ class ClosesController < ApplicationController
   before_action :move_to_index, only: [:index, :create]
 
   def index
-    @close = Close.new
   end
 
   def create
-    @close = Close.new(close_params)
-    @close.not_available = 1
-    @close.save
-    redirect_to root_path
+    if Close.create(user_id: current_user.id, spot_id: @spot.id)
+      redirect_to root_path
+    end
   end
-
   
   private
 
   def get_recode
     @spot = Spot.find(params[:spot_id])
-  end
-
-  def close_params
-    params.require(:close).permit(:not_available).merge(user_id: current_user.id, spot_id: @spot.id)
   end
 
   def move_to_index
