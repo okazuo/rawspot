@@ -9,6 +9,8 @@ FactoryBot.define do
     transcript_id {rand(2..3)}
     contact_id {rand(2..3)}
     explanation {Faker::Lorem.paragraphs}
+    latitude {Faker::Address.latitude}
+    longitude {Faker::Address.longitude}
     association :user
 
     after(:build) do |spot|

@@ -3,6 +3,8 @@ class Spot < ApplicationRecord
   with_options presence: true do
     validates :estate_agent, length: { maximum: 50 }
     validates :address, length: { maximum: 50 }
+    validates :latitude 
+    validates :longitude
   end
 
   validates :size, numericality: true, allow_blank: true, length: { maximum: 4 }

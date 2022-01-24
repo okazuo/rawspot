@@ -134,6 +134,16 @@ RSpec.describe Spot, type: :model do
         @spot.valid?
         expect(@spot.errors.full_messages).to include("Fax情報はpdf形式にしてください")
       end
+      it '経度がなければ登録できない' do
+        @spot.latitude = nil
+        @spot.valid?
+        expect(@spot.errors.full_messages).to include("マップで位置情報を示してください")
+      end
+      it '緯度がなければ登録できない' do
+        @spot.longitude = nil
+        @spot.valid?
+        expect(@spot.errors.full_messages).to include("マップで位置情報を示してください")
+      end
     end
   end
 end
