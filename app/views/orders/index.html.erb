@@ -15,7 +15,7 @@
         担当営業
         <%= current_user.name %>
       </div>
-      <%# エンターキーで送信されないようにダミーのテキストフィールド %>
+      <%# エンターキーで送信されないためのダミーのテキストフィールド %>
       <input type="text" name="dummy" style="display:none;">
       <%= f.submit '契約する', class:'agreement-btn',type: 'button', onClick: 'submit();' %>
     </div>

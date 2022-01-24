@@ -1,6 +1,6 @@
 .close{
   margin: 50px 0;
-  width: 30vw;
+  width: 70vw;
   text-align: center;
 }
 
@@ -10,15 +10,11 @@
 
 .close-btn{
   background-color:skyblue;
-  margin: 0 auto;
-  cursor: pointer;
   color: white;
   padding: 0.5vh 5vw;
   font-size: 25px;
   border-radius: 5px;
   border: solid 1px black;
-}
-
-.close-text{
-  display: none;
+  text-decoration: none;
+  display: inline-block;
 }
