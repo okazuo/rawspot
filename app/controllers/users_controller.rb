@@ -1,12 +1,8 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
 
   def show
-    @user = User.find(params[:id])
-    @spots = @user.spots
-
-    favorites = Favorite.where(user_id: current_user.id).pluck(:spot_id) 
-    @favorite_list = Spot.find(favorites).reverse
-
-    @my_spots = Spot.where(user_id: current_user.id).order(created_at: :DESC)
+    @favorite_list = Spot.where(id: (Favorite.where(user_id: current_user.id).pluck(:spot_id))).includes(:close, :user, :order).with_attached_images.order(created_at: :DESC)
+    @my_spots = Spot.where(user_id: current_user.id).includes(:close, :user, :order).with_attached_images.order(created_at: :DESC)
   end
 end

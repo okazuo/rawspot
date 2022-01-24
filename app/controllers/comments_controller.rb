@@ -4,7 +4,6 @@ class CommentsController < ApplicationController
     @spot = Spot.find(params[:spot_id])
     if @comment.save
       CommentChannel.broadcast_to @spot, { comment: @comment, user: @comment.user}
-      
     end
   end
 

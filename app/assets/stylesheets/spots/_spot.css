@@ -106,14 +106,18 @@ color:gray;
   color:white;
   font-size: 30px;
   font: bold;
-  letter-spacing: 30px;
 }
 
-.blue-band span{
+.close-title{
+  letter-spacing: 30px;
   padding-left: 30px;
 }
 
 .band-line{
   display: inline-block;
   padding: 0 7px;
+}
+
+.close-name{
+  font-size: 15px;
 }
