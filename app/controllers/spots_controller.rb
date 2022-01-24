@@ -4,8 +4,7 @@ class SpotsController < ApplicationController
   before_action :move_to_index, only: [:edit, :destroy]
   
   def index
-    @spots = Spot.order('created_at DESC')
-    @spot = Spot.new
+    @spots = Spot.order('created_at DESC').includes(:close, :user, :order).with_attached_images
   end
 
   def new
@@ -24,8 +23,8 @@ class SpotsController < ApplicationController
   end
   
   def show
-    @comments = @spot.comments.includes(:user)
     @comment = Comment.new
+    @comments = @spot.comments.includes(:user)
   end
   
   def edit
@@ -50,12 +49,13 @@ class SpotsController < ApplicationController
       params[:q][:address_cont_any] = squished_keywords.split(' ')
     end
     @q = Spot.ransack(params[:q])
-    @spots = @q.result.order("created_at DESC")
+    @search_spots = @q.result.order("created_at DESC")
+    render :index
   end
 
   def detail
     @q = Spot.ransack(params[:q])
-    @spots = @q.result.order("created_at DESC")
+    @spots = @q.result.order("created_at DESC").includes(:order)
   end
 
   private

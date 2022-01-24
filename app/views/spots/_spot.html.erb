@@ -27,7 +27,7 @@
           <div>
             <p class='price'>
               <% if spot.price.blank? %>
-              価格：未定<br>
+              価格 : 未定<br>
               <% else %>
               <b><%= spot.price %></b>万円
               <% end %>
@@ -45,7 +45,7 @@
       <% end %>
       <% if spot.close.present? %>
       <div class="blue-band">
-        <span>取扱不可</span>
+        <span class='close-title'>取扱不可</span><span class='close-name'><%= spot.close.user.name %>さん確認済み</span>
       </div>
       <% end %>
     </div>
