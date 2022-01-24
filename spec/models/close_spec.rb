@@ -7,17 +7,12 @@ RSpec.describe Close, type: :model do
 
   describe '取り扱い不可機能' do
     context '取り扱い不可にできる場合' do
-      it 'not_availableが存在すれば登録できる' do
+      it '全てが存在すれば登録できる' do
         expect(@close).to be_valid
       end
     end
 
     context '取り扱い不可にできない場合' do
-      it 'not_availableが存在しなければ登録できない' do
-        @close.not_available = ''
-        @close.valid?
-        expect(@close.errors.full_messages).to include('Not availableを入力してください')
-      end
       it 'user_idが存在しなければ契約できない' do
         @close.user = nil
         @close.valid?
