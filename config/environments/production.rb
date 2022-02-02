@@ -111,7 +111,7 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   ActionCable.server.config.disable_request_forgery_protection = true
-  config.action_cable.url = "wss://rawspot.herokuapp.com/cable" 
-  config.action_cable.allowed_request_origins = ['https://rawspot.herokuapp.com', 'http://rawspot.herokuapp.com']
+  config.action_cable.url = "ws://35.75.176.123/cable" 
+  config.action_cable.allowed_request_origins = ['http://35.75.176.123']
 
 end
