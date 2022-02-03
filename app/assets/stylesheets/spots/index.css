@@ -79,7 +79,7 @@
   text-align: center;
 }
 
-@media (max-width: 599px){
+@media (max-width: 810px){
   .spot-list{
     width: 100vw;
   }

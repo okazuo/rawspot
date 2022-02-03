@@ -105,8 +105,8 @@ th{
 
 .gray-btn, .red-btn, .blue-btn{
   color: white;
-  padding: 5px 70px;
-  margin:20px;
+  padding: 5px 8vw;
+  margin:20px 3vw;
   text-decoration: none;
   display:inline-block;
   font-size: 25px;
@@ -159,7 +159,7 @@ th{
   margin-bottom: 20px;
 }
 
-@media(max-width :599px){
+@media(max-width :810px){
   .show-spot{
     width: 100vw;
   }

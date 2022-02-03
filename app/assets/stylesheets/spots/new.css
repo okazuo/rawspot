@@ -183,8 +183,16 @@ text-align: center;
   margin: 20px auto;
 }
 
-@media(max-width:599px){
+@media(max-width:810px){
   .spot-main{
     width: 100vw;
+  }
+
+  .spot-text{
+    width: calc(100vw - 200px);
+  }
+
+  .spot-text-unic, .select-box{
+    width: calc(50vw - 180px);
   }
 }
