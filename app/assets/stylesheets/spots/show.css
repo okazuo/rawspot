@@ -5,7 +5,7 @@
 }
 
 .photo-size{
-  height: 80vh;
+  height: 100%;
   width: 100%;
   position: relative;
   margin-top: 25px;
@@ -13,6 +13,7 @@
 
 .show-photo{
   width: 100%;
+  max-height: 80vh;
   height: 100%;
   object-fit: contain;
   background-color: gainsboro;
@@ -45,13 +46,14 @@ th{
 
 .small-photo{
   padding: 0;
-  height: 20vh;
+  height: 100%;
   width: 20%;
   text-align: center;
 }
 
 .small-image{
   width: 100%;
+  max-height: 150px;
   height: 100%;
   object-fit: contain;
   vertical-align: bottom;
@@ -103,7 +105,7 @@ th{
 
 .gray-btn, .red-btn, .blue-btn{
   color: white;
-  padding: 1vh 8vw;
+  padding: 5px 70px;
   margin:20px;
   text-decoration: none;
   display:inline-block;
@@ -155,4 +157,10 @@ th{
 }
 .comment-form{
   margin-bottom: 20px;
+}
+
+@media(max-width :599px){
+  .show-spot{
+    width: 100vw;
+  }
 }

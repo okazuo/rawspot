@@ -124,16 +124,22 @@ margin: 15px 0;
   width: 280px;
 }
 
+#previews{
+text-align: center;
+}
+
 .preview-image{
   margin-top: 10px;
+  max-width: 500px;
   width:100%;
 }
 
 .image-delete-button {
+  max-width: 500px;
   text-align: center;
   border: solid 1px;
   cursor: pointer;
-  margin-top: -6px;
+  margin: -6px auto 0 auto;
 }
 
 .weight-bold-text>span{
@@ -177,3 +183,8 @@ margin: 15px 0;
   margin: 20px auto;
 }
 
+@media(max-width:599px){
+  .spot-main{
+    width: 100vw;
+  }
+}
