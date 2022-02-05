@@ -4,8 +4,16 @@ header{
   justify-content: center;
   background-color: orange;
   background: linear-gradient(to bottom,white,orange);
+  text-align: center;
 }
 
 .rawspot-icon{
   filter: drop-shadow(7px 7px 3px white);
+  width: 650px;
+}
+
+@media(max-width:700px){
+  .rawspot-icon{
+  width: calc(100% - 50px);
+  }
 }
