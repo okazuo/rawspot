@@ -1,7 +1,7 @@
 class SpotsController < ApplicationController
   before_action :authenticate_user!, except: :index
   before_action :get_recode, only: [:show, :edit, :update, :destroy]
-  # before_action :move_to_index, only: [:edit, :destroy]
+  before_action :move_to_index, only: [:edit, :destroy]
   
   def index
     @spots = Spot.order('created_at DESC').includes(:close, :user, :order).with_attached_images

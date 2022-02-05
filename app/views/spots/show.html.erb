@@ -106,15 +106,15 @@
     <%= render 'favorites/favorite'%>
 
     <div class='show-btn'>
-      <%# <% unless @spot.order.present? || @spot.close.present? %> %>
-      <%# <% if @spot.user.id == current_user.id %> %>
+      <% unless @spot.order.present? || @spot.close.present? %>
+      <% if @spot.user.id == current_user.id %>
       <%= link_to '編集 or 削除', edit_spot_path(@spot.id) ,class: 'gray-btn' %>
-      <%# <% end %> %>
+      <% end %>
       <div class='side-wrap'>
         <%= link_to '契約する' ,spot_orders_path(@spot.id) ,class: 'red-btn' %>
         <%= link_to '取扱不可',spot_closes_path(@spot.id),class: 'blue-btn'  %>
       </div>
-      <%# <% end %> %>
+      <% end %>
     </div>
 
     <%# コメント一覧 %>
