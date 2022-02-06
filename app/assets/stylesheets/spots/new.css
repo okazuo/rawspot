@@ -183,15 +183,86 @@ text-align: center;
   margin: 20px auto;
 }
 
+/* 投稿中の待機画面 */
+#animation_message{
+  display: none;
+  text-align: center;
+  position: fixed;
+  height: 200px;
+  width: 200px;
+  top:calc(50% - 200px/2 - 50px);
+  left:calc(50% - 200px/2 + 10px);
+  color: white;
+  font-weight: bold;
+  z-index: 1020;
+}
+
+#animation{
+  display: none;
+  margin:10px;
+  animation: swing linear 1s infinite;
+  transform-origin: 65px 160px;
+  float:left;
+  position: fixed;
+  height: 200px;
+  width: 200px;
+  top:calc(50% - 200px/2);
+  left:calc(50% - 200px/2);
+  z-index: 1000;
+}
+
+@-webkit-keyframes swing {
+  0% { -webkit-transform: rotate(0deg); }
+  25% { -webkit-transform: rotate(5deg); }
+  50% { -webkit-transform: rotate(0deg); }
+  75% { -webkit-transform: rotate(-5deg); }
+  100% { -webkit-transform: rotate(0deg); }
+} 
+@-ms-keyframes swing {
+  0% { -webkit-transform: rotate(0deg); }
+  25% { -webkit-transform: rotate(5deg); }
+  50% { -webkit-transform: rotate(0deg); }
+  75% { -webkit-transform: rotate(-5deg); }
+  100% { -webkit-transform: rotate(0deg); }
+} 
+
+#animation_marker{
+  display: none;
+  margin:10px;
+  animation: swing_marker linear 1s infinite;
+  transform-origin: 65px 160px;
+  float:right;
+  position: fixed;
+  height: 200px;
+  width: 200px;
+  top:calc(50% - 200px/2);
+  left:calc(50% - 200px/2);
+  z-index: 1010;
+}
+
+@-webkit-keyframes swing_marker {
+  0% { -webkit-transform: rotate(0deg); }
+  25% { -webkit-transform: rotate(-20deg); }
+  50% { -webkit-transform: rotate(0deg); }
+  75% { -webkit-transform: rotate(20deg); }
+  100% { -webkit-transform: rotate(0deg); }
+}    
+@-ms-keyframes swing_marker {
+  0% { -webkit-transform: rotate(0deg); }
+  25% { -webkit-transform: rotate(-20deg); }
+  50% { -webkit-transform: rotate(0deg); }
+  75% { -webkit-transform: rotate(20deg); }
+  100% { -webkit-transform: rotate(0deg); }
+}    
+
+
 @media(max-width:810px){
   .spot-main{
     width: 100vw;
   }
-
   .spot-text{
     width: calc(100vw - 200px);
   }
-
   .spot-text-unic, .select-box{
     width: calc(50vw - 180px);
   }

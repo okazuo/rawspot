@@ -113,9 +113,17 @@
     <%= f.text_area :explanation, class: 'spot-text-sentence', placeholder: '補足や注意点等(1000字以内)' ,maxlength: '1000' %>
 
     <div class='post-btn-contents'>
-      <%= f.submit '物件を登録', class:'spot-btn',type: 'button', onClick: 'submit();' %>
+      <%= f.submit '物件を登録', class:'spot-btn',type: 'button', onClick: 'submit();', id:'wait_btn' %>
       <%= link_to 'もどる', root_path, class:'back-btn' %>
     </div>
     <% end %>
   </div>
 </div>
+
+<%# 待機画面 %>
+<div id ="animation_message">
+地点を登録中・・・<br>
+しばらくお待ちください
+</div>
+<%= image_tag'indicator',id: 'animation'%>
+<%= image_tag'animation_marker',id: 'animation_marker'%>
