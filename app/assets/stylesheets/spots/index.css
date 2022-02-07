@@ -48,6 +48,11 @@
 }
 
 /* 物件一覧 */
+.spot-date:hover{
+  background-color: rgb(255, 255, 200);
+  transition:0.7s;
+}
+
 
 .spot-list{
   width: 70vw;
@@ -78,6 +83,55 @@
   margin: 0 -1px;
   text-align: center;
 }
+
+/* ロゴアニメーション */
+#gradation_animation{
+  display: none;
+  margin:10px;
+  animation: swing linear 1s infinite ,fadeInAnime 10s;
+  transform-origin: 65px 160px;
+  float:left;
+  position: fixed;
+  height: 200px;
+  width: 200px;
+  top:calc(50% - 200px/2);
+  left:calc(50% - 200px/2);
+  z-index: 1000;
+}
+
+#gradation_animation_marker{
+  display: none;
+  margin:10px;
+  animation: swing_marker linear 1s infinite,fadeInAnime 10s;
+  transform-origin: 65px 160px;
+  float:right;
+  position: fixed;
+  height: 200px;
+  width: 200px;
+  top:calc(50% - 200px/2);
+  left:calc(50% - 200px/2);
+  z-index: 1010;
+}
+
+@-webkit-keyframes fadeInAnime{
+  0% {
+    opacity: 0.5;
+  }
+   100%{
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeInAnime{
+  0% {
+    opacity: 0.5;
+  }
+   100%{
+     opacity: 1;
+    }
+  }
+  
+
 
 @media (max-width: 850px){
   .nav{
