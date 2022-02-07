@@ -18,8 +18,39 @@ footer{
   display: block;
   width: 150px;
   margin: 0 30px;
+  cursor: pointer;
 }
 
+/* ご利用ガイド */
+#grayback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  display: none;
+  background-color: rgba(0,0,0,.5);
+}
+
+#guide_message{
+  display: none;
+  position: fixed;
+  width: 680px;
+  top:calc(50% - 450px/2);
+  left:calc(50% - 680px/2);
+  background-color: skyblue;
+  border-radius: 10px;
+  padding: 5px;
+  border: solid 1px blue;
+  box-shadow: 0 0 20px white;
+}
+
+#guide_message span{
+  color: blue;
+}
+
+/* フッターロゴ */
 .footer-icon{
   margin-top: 15px;
   display: flex;
@@ -32,12 +63,11 @@ footer{
   width: 650px;
 }
 
-
 @media(max-width:700px){
   .rawspot-icon-white{
-  width: calc(100% - 50px);
+    width: calc(100% - 50px);
   }
-
+  
   .footer-link{
     font-size: 20px;
     width: 33vw;

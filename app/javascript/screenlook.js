@@ -17,10 +17,13 @@ document.addEventListener('DOMContentLoaded', function(){
     objBody.appendChild(element);
 
     const logo =document.getElementById('animation')
-    logo.style.display='block'
     const marker =document.getElementById('animation_marker')
-    marker.style.display='block'
     const animessage =document.getElementById('animation_message')
+    logo.style.display='block'
+    logo.style.opacity = '1';
+    marker.style.display='block'
+    marker.style.opacity = '1';
     animessage.style.display='block'
+
   })
 })

@@ -9,13 +9,12 @@ document.addEventListener('DOMContentLoaded', function(){
       logo.style.opacity = '0.7';
       marker.style.display='block'
       marker.style.opacity = '0.7';
-    }, 1000);
+    }, 2000);
     
     animation_switch.addEventListener('mouseout',function(){
       clearTimeout(timeout_id)
       logo.style.display='none'
       marker.style.display='none'
-      
     })
   })
 })
