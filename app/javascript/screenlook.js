@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function(){
   if (!spotForm) return null;
   
   wait_btn.addEventListener('click',function(){
-    console.log('aaa')
     const element = document.createElement('div')
     element.style.height = '100%';
     element.style.position = 'fixed';
