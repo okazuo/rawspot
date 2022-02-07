@@ -64,6 +64,9 @@ text-align: center;
 	top: 170px;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
 }
 
 .rawspot-icon-white-two{
@@ -73,11 +76,21 @@ text-align: center;
 	top: 170px;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 	transition: .4s ease-in-out;
+	-webkit-transition: .4s ease-in-out;
+	-moz-transition: .4s ease-in-out;
+	-ms-transition: .4s ease-in-out;
+  
 }
 
 .rawspot-icon-white-two:hover{
 	transform: translate(-50%, -50%) scale(1.15);
+	-webkit-transform: translate(-50%, -50%) scale(1.15);
+	-moz-transform: translate(-50%, -50%) scale(1.15);
+	-ms-transform: translate(-50%, -50%) scale(1.15);
   opacity: 0;
   cursor: pointer;
 }
