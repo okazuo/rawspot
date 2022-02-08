@@ -37,7 +37,6 @@
             <p><span>[登録者]</span><%= spot.user.name %></p>
           </div>
         </li>
-      </ul>
       <% if spot.order.present? %>
       <div class="red-band">
         <span class='band-line'>[<%= spot.order.customer%>様 成約済]</span><span class='band-line'><%= spot.order.user.name  %>さん  おめでとうございます!!!</span>
@@ -48,5 +47,6 @@
         <span class='close-title'>取扱不可</span><span class='close-name'><%= spot.close.user.name %>さん確認済み</span>
       </div>
       <% end %>
+      </ul>
     </div>
     <% end %>

@@ -67,7 +67,13 @@
     <table class='margin-table'>
       <tr>
         <th>坪数</th>
-        <td><%= @spot.size %>坪</td>
+        <td>
+        <% if @spot.size.blank?%>
+        未定
+        <% else %>
+        <%= @spot.size %>坪
+        <% end %>
+        </td>
         <th>価格</th>
         <td class='price'>
           <% if @spot.price.blank? %>

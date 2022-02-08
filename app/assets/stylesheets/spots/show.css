@@ -1,7 +1,7 @@
 .show-spot{
   width: 70vw;
   margin: 0 auto;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .photo-size{
@@ -28,12 +28,12 @@ th,td{
   background-color: white;
   border-collapse: collapse;
   border:1px solid black;
-  padding: 8px;
+  padding: 4px;
 }
 
 th{
   background-color: rgb(255, 255, 187);
-  width: 100px;
+  width: 130px;
 }
 
 .margin-table{
@@ -139,9 +139,9 @@ th{
 }
 
 .comment-text{
-  width:calc(100% - 100px) ;
+  width:calc(100% - 140px) ;
   resize: none;
-  padding: 12px 10px;
+  padding: 10px 10px;
   height: 50px;
   box-sizing: border-box;
 }
@@ -150,6 +150,7 @@ th{
   justify-content: center;
   vertical-align: top;
   height: 50px;
+  width: 130px;
 }
 
 .space{

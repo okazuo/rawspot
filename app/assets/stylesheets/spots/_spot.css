@@ -14,12 +14,13 @@
   color: black;
 }
 
-.spot-date span{
-color:gray;
+.spot-date li span{
+  color:gray;
 }
 
 .spot-date > li{
   border: 1px solid;
+  font-size: 20px;
 }
 
 .left-date{
@@ -95,7 +96,7 @@ color:gray;
   font: bold;
 }
 
-.blue-band{
+.blue-band {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
