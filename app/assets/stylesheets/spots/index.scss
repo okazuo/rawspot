@@ -14,7 +14,7 @@
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background-image: url("../background.png");
+  background-image: image-url('background.png');
   background-size: 20%;
   filter: drop-shadow(0px 0px 0.5px rgb(180, 180, 255));
 }
