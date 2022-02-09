@@ -158,7 +158,6 @@ text-align: center;
 
 .spot-btn{
   display: block;
-  box-sizing: border-box;
   width: 80%;
   height: 50px;
   background-color: rgb(0, 158, 0);
@@ -178,7 +177,7 @@ text-align: center;
   border-radius: 5px;
   background-color: rgb(165, 165, 165);
   color: white;
-  padding-top: 7px;
+  line-height: 40px;
   box-sizing: border-box;
   margin: 20px auto;
 }

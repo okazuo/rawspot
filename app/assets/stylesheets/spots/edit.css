@@ -3,12 +3,12 @@
   text-decoration: none;
   width: 70%;
   height: 40px;
+  line-height: 40px;
   text-align: center;
   border: 1px solid black;
   border-radius: 5px;
   background-color: red;
   color: white;
-  padding-top: 7px;
   box-sizing: border-box;
   margin: 30px auto;
   }
