@@ -11,7 +11,6 @@ footer{
   justify-content: center;
   text-align: center;
   font-size: 25px;
-  text-shadow: 3px 3px 3px green;
 }
 
 .footer-link{
@@ -83,14 +82,13 @@ text-align: center;
 	-webkit-transition: .4s ease-in-out;
 	-moz-transition: .4s ease-in-out;
 	-ms-transition: .4s ease-in-out;
-  
 }
 
 .rawspot-icon-white-two:hover{
-	transform: translate(-50%, -50%) scale(1.15);
-	-webkit-transform: translate(-50%, -50%) scale(1.15);
-	-moz-transform: translate(-50%, -50%) scale(1.15);
-	-ms-transform: translate(-50%, -50%) scale(1.15);
+	transform: translate(-50%, -50%) scale(1.08);
+	-webkit-transform: translate(-50%, -50%) scale(1.08);
+	-moz-transform: translate(-50%, -50%) scale(1.08);
+	-ms-transform: translate(-50%, -50%) scale(1.08);
   opacity: 0;
   cursor: pointer;
 }

@@ -72,6 +72,10 @@ th{
   color: black;
 }
 
+.fax-btn:hover{
+  background-color: rgb(235, 235, 117);
+}
+
 /* お気に入りボタン */
 
 .show-favorite{
@@ -112,10 +116,22 @@ th{
   font-size: 25px;
   border-radius: 5px;
   border: solid 1px black;
+  box-shadow: 0 2px 2px gray;
 }
 
+.gray-btn:hover, .red-btn:hover, .blue-btn:hover, .spot-btn:hover, .back-btn:hover, .delete-btn:hover, .agreement-btn:hover, .close-btn:hover{
+opacity: 0.8;
+}
+
+.gray-btn:active, .red-btn:active, .blue-btn:active, .spot-btn:active, .back-btn:active, .delete-btn:active, .agreement-btn:active, .close-btn:active{
+box-shadow: none;
+transform: translateY(2px);
+}
+
+
+
 .gray-btn{
-  background-color: gray;
+  background-color: darkgray;
 }
 
 .red-btn{

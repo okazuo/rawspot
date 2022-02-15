@@ -21,9 +21,8 @@
 
 .detail-title span {
   position: relative;
-  padding: 0 1em;
-  background: ghostwhite;
-  padding-right: 15px;
+  background: white;
+  padding-left: 15px;
 }
 
  /* ソースボタン */
@@ -39,6 +38,15 @@
   color: black;
   text-decoration: none;
   padding: 8px;
+}
+
+.detail-table tr:hover td{
+  background-color: pink;
+  transition: 0.7s;
+}
+
+.detail-table th:hover{
+  background-color: rgb(241, 241, 179);
 }
 
 .detail-table td,.detail-table th{

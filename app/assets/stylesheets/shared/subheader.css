@@ -1,6 +1,7 @@
 .sub-title{
   background-color: orange;
   width: 100vw;
+  line-height: 35px;
 }
 
 
@@ -9,7 +10,6 @@
   justify-content: center;
   align-items: center;
   text-shadow: 2px 2px 3px black;
-  
 }
 
 .top-title{
@@ -19,7 +19,21 @@
   text-align: center;
   color:white;
   font-weight: bold;
+  transition: 0.5s;
 }
+
+.top-title:hover{
+  transition: 0.5s;
+  font-size: 1.1em;
+  text-shadow: 0px 3px 3px black;
+  color: white;
+}
+
+.top-title:active{
+  text-shadow: 0 1px 1px black;
+  transition: 0s;
+}
+
 
 .nosign-title{
   text-align: center;
@@ -33,10 +47,25 @@
   text-decoration: none;
   text-align: center;
   color:white;
-  font-weight: bold;
   border: 2px solid white;
-  box-shadow: 2px 2px 3px black;
-  margin: 20px 20px 80px 20px;
+  box-shadow: 3px 3px 5px black;
+  margin: 20px 20px 70px 20px;
+  transition: 0.5s;
+  padding: 5px;
+}
+
+.top-title-nosign:hover {
+  font-weight: bold;
+  transition: 0.5s;
+  box-shadow: 0px 2px 2px black;
+  font-size: 1.1em;
+  text-shadow: 0 3px 4px black;
+}
+
+.top-title-nosign:active{
+  box-shadow: 0 1px 1px black;
+  text-shadow: 0 1px 2px black;
+  transition: 0s;
 }
 
 @media (max-width: 810px){

@@ -23,7 +23,7 @@ margin: auto 2vw auto 0;
 .customer-text{
 height: 50px;
 padding: 0 10px;
-width: calc(100% - 40vw);
+width: 30vw;
 }
 
 .employee{
@@ -40,4 +40,5 @@ font-weight: bold;
   font-size: 25px;
   border-radius: 5px;
   border: solid 1px black;
+  box-shadow: 0 2px 2px gray;
 }
