@@ -9,14 +9,16 @@
         <% end %>
         <% if @spot.order.present? %>
         <div class="red-band">
-          <span class='band-line'>[<%= @spot.order.customer%>様 成約済み]</span><span
-            class='band-line'><%= @spot.order.user.name  %>さん
-            おめでとうございます!!!</span>
+          <span class='band-line'>[<%= @spot.order.customer%>様 成約済]</span><br>
+          <span class='band-line'><%= @spot.order.user.name  %>さん  おめでとうございます!!!</span>
+          <span class='band-time'><%= @spot.order.created_at.strftime('%m/%d') %></span>
         </div>
         <% end %>
         <% if @spot.close.present? %>
         <div class="blue-band">
-          <span class='close-title'>取扱不可</span><span class='close-name'><%= @spot.close.user.name %>さん確認済み</span>
+          <span class='close-title'>取扱不可</span><br>
+          <span class='close-name'><%= @spot.close.user.name %>さん確認済み</span>
+          <span class='band-time'><%= @spot.close.created_at.strftime('%m/%d') %></span>
         </div>
         <% end %>
       </div>

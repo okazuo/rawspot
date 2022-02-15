@@ -96,6 +96,10 @@
   font: bold;
 }
 
+.band-time{
+  font-size: 15px;
+}
+
 .blue-band {
   position: absolute;
   top: 50%;
