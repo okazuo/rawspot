@@ -17,10 +17,18 @@ footer{
   text-decoration: none;
   color: white;
   display: block;
-  width: 150px;
-  margin: 0 30px;
+  width: 170px;
+  height: 40px;
+  margin: 0 10px;
   cursor: pointer;
+  line-height: 40px;
 }
+
+.footer-link:hover{
+  color: skyblue;
+  font-weight: bold;
+}
+
 
 /* ご利用ガイド */
 #grayback {
@@ -51,6 +59,21 @@ footer{
   color: blue;
 }
 
+/* お問合せ */
+#inquiry_message, #request_message{
+  display: none;
+  position: fixed;
+  width: 300px;
+  height: 100px;
+  top: calc(50% - 100px/2);
+  left: calc(50% - 300px/2);
+  background-color: skyblue;
+  border-radius: 10px;
+  padding: 5px;
+  border: solid 1px blue;
+  box-shadow: 0 0 20px white;
+}
+
 /* フッターロゴ */
 .footer-icon{
 text-align: center;
@@ -63,34 +86,12 @@ text-align: center;
 	top: 170px;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
+  transition: 1s;
 }
 
-.rawspot-icon-white-two{
-  filter: drop-shadow(5px 5px 3px green);
-  width: 650px;
-  position: absolute;
-	top: 170px;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transition: .4s ease-in-out;
-	-webkit-transition: .4s ease-in-out;
-	-moz-transition: .4s ease-in-out;
-	-ms-transition: .4s ease-in-out;
-}
-
-.rawspot-icon-white-two:hover{
-	transform: translate(-50%, -50%) scale(1.08);
-	-webkit-transform: translate(-50%, -50%) scale(1.08);
-	-moz-transform: translate(-50%, -50%) scale(1.08);
-	-ms-transform: translate(-50%, -50%) scale(1.08);
-  opacity: 0;
-  cursor: pointer;
+.rawspot-icon-white:hover{
+	transform: translate(-50%, -50%) scale(1.03);
+  transition: 1s ease-in-out 1s;
 }
 
 @media(max-width:700px){
@@ -107,3 +108,6 @@ text-align: center;
     margin: 0px;
   }
 }
+
+transition: margin-right 2s ease-in-out .5s;
+transition: margin-right 2s ease-in-out;
