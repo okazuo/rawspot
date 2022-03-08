@@ -1,0 +1,167 @@
+.sub-title{
+  background-color: orange;
+  width: 100vw;
+  line-height: 35px;
+}
+
+
+.top-lists{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 3px black;
+}
+
+.top-title{
+  display: block;
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+  color:white;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.top-title:hover{
+  transition: 0.5s;
+  font-size: 1.1em;
+  text-shadow: 0px 3px 3px black;
+  color: white;
+}
+
+.top-title:active{
+  text-shadow: 0 1px 1px black;
+  transition: 0s;
+}
+
+
+.nosign-title{
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.top-title-nosign{
+  display: block;
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+  color:white;
+  border: 2px solid white;
+  box-shadow: 3px 3px 5px black;
+  margin: 10px 20px 30px 20px;
+  transition: 0.5s;
+  padding: 5px;
+}
+
+.top-title-nosign:hover {
+  font-weight: bold;
+  transition: 0.5s;
+  box-shadow: 0px 2px 2px black;
+  font-size: 1.1em;
+  text-shadow: 0 3px 4px black;
+}
+
+.top-title-nosign:active{
+  box-shadow: 0 1px 1px black;
+  text-shadow: 0 1px 2px black;
+  transition: 0s;
+}
+
+.top-image{
+  width: 100vw;
+  
+ background-image: image-url('land.jpg');
+ background-size: cover;
+}
+
+.top-example{
+  color: white;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 0.8em;
+}
+
+.top-example-title{
+  color: white;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+  animation: slideInleft 1.6s;
+}
+
+.subheader-contents{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.subheader-content{
+  width: 20%;
+  background-color: ghostwhite;
+  border-radius: 15px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.content-title{
+  font-weight: bold;
+}
+
+.sub-image-size{
+  width: 15vw;
+  height: 200px;
+  position: relative;
+  margin: auto;
+}
+
+.subheader-image{
+  width: auto;
+  height: auto;
+  max-width:100%;
+  max-height:100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.subheader-explanation{
+  font-size: 0.8em;
+}
+
+.subheader-content{
+  animation: slideIn 1.6s;
+}
+ 
+@keyframes slideIn {
+  0% {
+    transform: translateX(180px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInleft {
+  0% {
+    transform: translateX(-180px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 810px){
+  .top-title{
+    width: 25vw;
+  }
+}

@@ -123,16 +123,7 @@
   z-index: 1010;
 }
 
-@-webkit-keyframes fadeInAnime{
-  0% {
-    opacity: 0.5;
-  }
-   100%{
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes fadeInAnime{
+@keyframes fadeInAnime{
   0% {
     opacity: 0.5;
   }

@@ -16,3 +16,43 @@
     </ul>
     <% end %>
   </div>
+
+  <% unless  user_signed_in? %>
+  <div class='top-image'>
+    <p class='top-example'>住宅の営業マンが日々土地探しにかける時間は膨大です<br>
+      その時間を少しでも減らせるようにできたのがRawspotです<br>
+      非公開や地上げの売地を社内で共有しましょう</p>
+    <p class='top-example-title'>Rawspotでできる4つのこと</p>
+
+    <div class='subheader-contents'>
+      <div class='subheader-content'>
+        <div class='content-title'>◉売地を登録する</div>
+        <div class='sub-image-size'>
+          <%= image_tag 'map.png', class:'subheader-image'%>
+        </div>
+        <p class='subheader-explanation'>FAXや写真などを添付して売地を登録します</p>
+      </div>
+      <div class='subheader-content'>
+        <div class='content-title'>◉売地を探す</div>
+        <div class='sub-image-size'>
+          <%= image_tag 'magnify.png', class:'subheader-image'%>
+        </div>
+        <p class='subheader-explanation'>希望の住所や金額で売地を検索します</p>
+      </div>
+      <div class='subheader-content'>
+        <div class='content-title'>◉売地を購入する</div>
+        <div class='sub-image-size'>
+          <%= image_tag 'money.png', class:'subheader-image'%>
+        </div>
+        <p class='subheader-explanation'>お客様がその土地でご納得すれば購入しましょう</p>
+      </div>
+      <div class='subheader-content'>
+        <div class='content-title'>◉取扱いを停止する</div>
+        <div class='sub-image-size'>
+          <%= image_tag 'stop.png', class:'subheader-image'%>
+        </div>
+        <p class='subheader-explanation'>既になくなっている土地が確認できた時は取り扱いを停止しましょう</p>
+      </div>
+    </div>
+  </div>
+  <% end %>
