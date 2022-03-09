@@ -93,14 +93,14 @@ footer {
   transition: 1s ease-in-out 1s;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 550px) {
   .rawspot-icon-white {
     width: calc(100% - 50px);
   }
 
   .footer-link {
     font-size: 20px;
-    width: 3vw;
+    width: 33vw;
     margin: 0px;
   }
 }

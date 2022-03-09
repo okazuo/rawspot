@@ -13,7 +13,7 @@ header{
   transition: 0.5s;
 }
 
-@media(max-width:700px){
+@media(max-width:550px){
   .rawspot-icon{
   width: calc(100% - 50px);
   }
