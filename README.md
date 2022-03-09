@@ -18,15 +18,15 @@ https://rawspot.site/
 # DEMO　※掲載している個人名、社名など全て架空のものです※
 ### トップページ（ログイン前）
 ・ログインしないと使えません。テストアカウントをお使いください。
-[![Image from Gyazo](https://i.gyazo.com/1c855ba2ad5b7fb270107d19a60f34cb.png)](https://gyazo.com/1c855ba2ad5b7fb270107d19a60f34cb)
+[![Image from Gyazo](https://i.gyazo.com/e89d0835cae6e445a0a188d738c5f0ab.jpg)](https://gyazo.com/e89d0835cae6e445a0a188d738c5f0ab)
 ### トップページ（ログイン後）
 ・投稿した土地情報が表示される。  
 ・検索欄で希望エリアや金額等を絞り込めるようにした。  
-[![Image from Gyazo](https://i.gyazo.com/b554f5b60988b84a5b7012f55bff6958.jpg)](https://gyazo.com/b554f5b60988b84a5b7012f55bff6958)
+[![Image from Gyazo](https://i.gyazo.com/6e6a53bc1890780ab1641a80a6d3fb54.jpg)](https://gyazo.com/6e6a53bc1890780ab1641a80a6d3fb54)
 ### 物件登録画面
 ・地図を表示したあとに、マーカーを移動させることも可能。  
 ・投稿する現地写真はプレビューが表示される。  
-[![Image from Gyazo](https://i.gyazo.com/07a4ec8b910cfddbe9957ffc317dbeb1.png)](https://gyazo.com/07a4ec8b910cfddbe9957ffc317dbeb1)
+[![Image from Gyazo](https://i.gyazo.com/be942042d8b3afad157795e773d2628e.jpg)](https://gyazo.com/be942042d8b3afad157795e773d2628e)
 ### 詳細表示画面
 ・「FAX情報 確認」ボタンで紙媒体のFAXを確認可能。  
 ・「お気に入り登録」ボタンで非同期通信のお気に入り登録ができる。  
@@ -42,7 +42,7 @@ https://rawspot.site/
 [![Image from Gyazo](https://i.gyazo.com/328e335952c46bb25e0a650f79a6eb3e.png)](https://gyazo.com/328e335952c46bb25e0a650f79a6eb3e)
 ### マイページ画面
 ・自分のお気に入りと、過去の投稿物件が表示される。
-[![Image from Gyazo](https://i.gyazo.com/28fcad3d2222d2ac4516144c44682131.jpg)](https://gyazo.com/28fcad3d2222d2ac4516144c44682131)
+[![Image from Gyazo](https://i.gyazo.com/c9619206812d56d39ff23bc91fea38e4.jpg)](https://gyazo.com/c9619206812d56d39ff23bc91fea38e4)
 # 工夫したポイント
 ・現実で課題になっていることに取り組んだ。  
 ・面倒くさがりな営業マンのために、投稿時の必須項目は最低限にして、プルダウンの選択型にした。  
